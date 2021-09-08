@@ -1,7 +1,7 @@
-# Variables Types
+# Variables
+
 # - int
 # - float
-# - Strings
 points = 100
 print(points)
 
@@ -13,20 +13,18 @@ width = 7.5
 area = height * width
 print(height, width, area)
 
+number1 = 5
+number2 = 3
+number3 = 9
+average = (number1 + number2 + number3) / 3
+print(average)
+
+#
+# String
+#
 name = "José Maria"
 print (name)
 
 last_name = 'Santos'
 print(name, last_name)
 
-phrase = 'The world\tis\tbeautifil'
-print(phrase)
-
-phrase = "This isn't wrong"
-print(phrase)
-
-phrase = 'This isn\'t wrong'
-print(phrase)
-
-text = "This is the firstline\nThis is the second line\nThis is the third line"
-print(text)
