@@ -40,4 +40,20 @@ print(full_name[5:])
 
 print(full_name[0:100])
 # Error: print(full_name[5:])
-print(full_name[11])
+#print(full_name[11])
+
+# String are immutable.
+# Try to assign a value to a index causes an error: 
+# 'str' object does not support item assignment
+# full_name[0] = 'j'
+# full_name[5] = 's'
+# If you need to change a string, you need to generate a new one
+new_full_name = f"j{full_name[1:5]}s{full_name[6:]}"
+print(new_full_name)
+
+
+### Excercises
+# 1. Create an expression to generated an inverted version of a string with 5 chars
+#    e.g: abcde -> edcba
+# 2. Create an expression to generate a new string from "a_b_c_d_e" without the '_' characters
+#    response: abcde
