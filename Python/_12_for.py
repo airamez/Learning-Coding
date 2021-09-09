@@ -2,8 +2,7 @@
 
 for i in range(0, 10):
   print(i)
-
-print()
+print("This is after the for")
 
 for i in range(0, 50, 5):
   print(i)
