@@ -1,4 +1,9 @@
-# String literals are defined by " or '
+'''
+In Python, Strings are arrays of bytes representing Unicode characters.
+However, Python does not have a character data type, a single character is simply a string with a length of 1.
+String literals are defined by " or '
+'''
+
 first_name = "Jose"
 last_name = 'Santos'
 print("Fullname:", first_name, last_name)

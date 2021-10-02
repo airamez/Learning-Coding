@@ -1,8 +1,9 @@
+# Input returns the value as string
+
 name = input("What is your name: ")
 greatings = f"Hello {name}"
 print(greatings)
 
-# Input returns the value as string
 n1 = int(input("Integer number 1: "))
 n2 = int(input("Integer number 2: "))
 average = (n1 + n2) / 2
