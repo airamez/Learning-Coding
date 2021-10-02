@@ -1,4 +1,9 @@
 """
+VARIABLES
+A computer is a special machine that operates on data (information) and variables are the basic structures to store data/information.
+"""
+
+"""
 IDENTIFIERS
 An identifier is a name used to identify something in a program.
 In Python an identifier is case sensitive, and starts with a letter, or
@@ -14,31 +19,24 @@ continue  finally   is        return
 def       for       lambda    try
 """
 
-"""
-VARIABLES
-A computer is a special machine that operates on data (information) and variables are the basic structures to store data/information.
-"""
-
 # Integer
 age = 44  # Declaring and assigning an integer value
-print(age)  # Prints to the default output
+print('age = ', age)  # Prints to the default output
 
 # Floating point
 payment = 345.67
-print(payment)
+print('payment = ', payment)
 
 # Boolean
 approved = True
-print(approved)
+print("approved =", approved)
 approved = False
-print(approved)
+print("approved =", approved)
 
-#
 # String
-#
 name = "José Maria"
-print (name)
+print ("name =", name)
 
-last_name = 'Santos'
-print(name, last_name)
+last_name = 'Rodrigues Santos Júnior'
+print('full name =', name, last_name)
 
