@@ -1,5 +1,5 @@
 """
-Game to find a number from 0 to 9
+Game to find a random number from 0 to 9
 """
 
 # Importing a python module to use a function to return a random number

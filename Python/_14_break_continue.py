@@ -17,7 +17,7 @@ for i in range(10):
   print(i)
 
 
-# Simulating a do while
+# Simulating a 'do while'
 while True:
   number = int(input("Type a number between 5 and 10: "))
   if number > 5 and number < 10:

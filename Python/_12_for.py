@@ -1,8 +1,10 @@
 '''
-A for loop is used for iterating over a sequence
-The command range can be used to generate a sequence
-range(i,j) => i = inclusive; j = exclusive
-OBS: Python for is different from C like languages: C, C++, C#, Java, JavaScript, etc
+A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+The command range can be used to generate a sequence:
+  range(i,j) => i = inclusive; j = exclusive
+Observations: 
+  1 - Python for is different from C like languages: C, C++, C#, Java, JavaScript, etc
+  2 - It is more like a foreach
 '''
 
 print('All interval')
