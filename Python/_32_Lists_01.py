@@ -1,8 +1,15 @@
+
+months = ["January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"]
+
+print('#1 Printing a list')
+print(months)
+for month in months:
+  print(f'{month}, ', end='')
+
 # Declaring List
 languages = list()
-# languages = []
 
-print("#1 Adding elements to a List")
 languages.append("Python")
 languages.append("Java")
 languages.append("C#")
