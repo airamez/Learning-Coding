@@ -1,0 +1,15 @@
+Introduction to collections:
+It is really common in coding the requirement to store a collection or list of values.
+Every programming language offer many different collection components and the most basic is called Array.
+========================================================================================================================
+WARNING: An Array is a collection of elements of a specific type and the size of the array is define on creation and
+can't be changed later. Most of the "major" programming languages like C, C++, Java and C# offer a basic type for Array.
+However, Python doesn't offer a basic type matching the classic concept of Arrays. Instead Python offers a Collection
+called List that is very powerful and flexible.
+========================================================================================================================
+
+There are four basic built-in collections in Python:
+List:       A list is a container that holds a number of other objects of any type, in a given order.
+Tuple:      Same as a list but the elements are immutable.
+Set:        A set is an unordered collection with no duplicate elements.
+Dictionary: A dictionary is a collection of unordered values stored with a key.

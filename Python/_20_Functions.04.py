@@ -9,11 +9,14 @@ def my_print(name: str, salary: float, age: int):
         # Even the function not returning a value the return statement ends the function and the especial value
         # None is returned
         return
-    print('[Name = {0}, Salary = {1}, Age = {2}]'.format(name, salary, age))
+    print(f'{{"Name":{name}, "Salary":{salary}, "Age": {age}}}')
 
 
-my_print("José Santos", 150000, 45)
+return_value =  my_print("José Santos", 150000, 45)
+print(return_value) # Remember that every function in Python returns a value. None if not specified
+
 my_print(age=45, name="José Santos", salary=150000)
+
 my_print("Michael Jordan", 999999999, 50)
 my_print("", 1000, 18)
 my_print(None, 1000, 18)

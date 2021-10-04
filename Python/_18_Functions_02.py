@@ -12,7 +12,7 @@ def repeat(string, times=10):  # Default parameter
     """
     result = ''
     for i in range(1, times + 1):
-        result = result + string
+        result += string
     return result
 
 print(repeat('*'))

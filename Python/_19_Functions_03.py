@@ -2,8 +2,8 @@
 Functions with typed parameters and typed return
 """
 
-
-def get_salutation(name: str, hour: int) -> str:  # Providing the type of the parameters and return type
+# Providing the type of the parameters and return type
+def get_salutation(name: str, hour: int) -> str:
     """
     This function returns the proper salutation based on the hour
     :param name: Name
@@ -21,15 +21,15 @@ def get_salutation(name: str, hour: int) -> str:  # Providing the type of the pa
     return "Hello {0}, {1}".format(name, salutation)
 
 
-# Control + Q shows documentation
+# Openning parentisis will show the documentation
 print(get_salutation("José", 8))
 print(get_salutation("Artur", 13))
 print(get_salutation("Leila", 18))
-print(get_salutation("Nilzete", 22))
+print(get_salutation("Bob Marley", 22))
 
 # Passing parameters by name. This ignore the order
-print(get_salutation(name="Alciene", hour=7))
-print(get_salutation(hour=15, name="Zenilton"))
+print(get_salutation(name="Michael Jackson", hour=7))
+print(get_salutation(hour=15, name="Clinton Eastwood"))
 
 # Passing variables as parameters
 myName = "José"
