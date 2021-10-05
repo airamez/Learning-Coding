@@ -3,6 +3,7 @@ months = ["January", "February", "March", "April", "May", "June",
           "July", "August", "September", "October", "November", "December"]
 
 print('#1 Printing a list')
+print('Type =', type(months))
 print(months)
 for month in months:
   print(f'{month}, ', end='')

@@ -1,5 +1,6 @@
 # Declaring a list
 my_list = []
+print('Type:', type(my_list))
 
 # Reading data to a list
 while True:

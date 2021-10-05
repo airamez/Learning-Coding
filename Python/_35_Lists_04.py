@@ -10,6 +10,7 @@ matrix = [[1, 2, 3],
           [7, 8, 9]]
 
 print("#1 Using print with a 'matrix'")
+print('Type = ', type(matrix))
 print(matrix)
 
 print("\n#2 Printing a matrix")

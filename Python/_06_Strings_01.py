@@ -2,6 +2,9 @@
 In Python, Strings are arrays of bytes representing Unicode characters.
 However, Python does not have a character data type, a single character is simply a string with a length of 1.
 String literals are defined by " or '
+String in Python is an immutable collection of Unicode characters
+UNICODE: https://en.wikipedia.org/wiki/Unicode
+         https://unicode-table.com/en/#control-character
 '''
 
 first_name = "Jose"
