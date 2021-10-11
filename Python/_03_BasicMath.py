@@ -31,7 +31,11 @@ print("2 ** 3 =", 2 ** 3)
 print("2 ** 4 =", 2 ** 4)
 print("3.75 ** 2.5 =", 3.75 ** 2.5)
 
-### Excercises
+# min and max. Accept not just a pair but a list
+print ('min(1, 2, 3, 4, 5) =', min(1, 2, 3, 4, 5))
+print ('max(1, 2, 3, 4, 5) =', max(1, 2, 3, 4, 5))
+
+### Practice
 # 1. Create an expression to convert from Miles to Kilometers
 # 2. Create an expression to convert from Kilometers to Miles 
 # 3. Create an expression to convert temperature from Fahrenheit to Celsius

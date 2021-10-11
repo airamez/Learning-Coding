@@ -1,34 +1,3 @@
 {
-  "files": {
-    "Test1.py": [
-      {
-        "id": "46057cf7-81f6-4ce7-8cfc-5a03c000b8c8",
-        "line": 7,
-        "version": 1,
-        "index": 91
-      }
-    ],
-    "_03.Variables.py": [
-      {
-        "id": "fe760d28-47f1-43eb-ae36-efb3e0134a4c",
-        "line": 1,
-        "version": 574,
-        "index": 0
-      },
-      {
-        "id": "874fc1cf-0250-4f03-a263-d05d045e014e",
-        "line": 31,
-        "version": 574,
-        "index": 401
-      }
-    ],
-    "_03_Variables.py": [
-      {
-        "id": "19b982f5-5627-4b6c-827f-2a364a5e0347",
-        "line": 26,
-        "version": 432,
-        "index": 296
-      }
-    ]
-  }
+  "files": {}
 }
