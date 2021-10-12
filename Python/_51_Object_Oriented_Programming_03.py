@@ -1,6 +1,6 @@
 # Class implementation example
 # Encapsulation in Python is define by name convention
-# 'Protected' attributes starts with _
+# Protected attributes starts with _
 # Private attributes starts with __
 class Account:
   '''Class representing a Bank Account'''
@@ -30,6 +30,9 @@ class Account:
     '''Withdraw the amount from the Account balance'''
     self.__balance -= amount;
 
+  def __privateMethod(): # Private method
+    pass
+
 account_1 = Account(0, 1000)
 account_2 = Account(2, 2000)
 
@@ -50,9 +53,14 @@ try:
 except Exception as ex:
   print('account_1.__balance is private: ', ex)
   
-# As Python allow attributes to be created at run time
+try:
+  account_1.__privateMethod()
+except Exception as ex:
+  print('account_1.__privateMethod is private: ', ex)
+
+# As Python allow attributes to be created on the fly.
 # The operation below will create a different attribute
-# Attention: Use the debugger to demonstrate
+# ATTENTION: Use the debugger to demonstrate
 account_1.__balance = 10000 # This will be a different attribute
 print('account_1.__balance =', account_1.__balance)
 print('Account 1: ', account_1.getId(), account_1.getBalance())

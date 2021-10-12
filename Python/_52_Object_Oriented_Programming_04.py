@@ -1,4 +1,4 @@
-# using properties to replace the get Methods
+# using properties to replace the setter and getters Methods
 class Account:
   '''Class representing a Bank Account'''
 
@@ -7,6 +7,7 @@ class Account:
     self.__id = id # private attribute
     self.__balance = balance # private attribute
 
+  # Defining a property for ID
   @property
   def id(self):
     '''Get ID'''
