@@ -24,3 +24,12 @@ print(factorial(5))
 print(factorial(6))
 print(factorial(7))
 print(factorial(8))
+
+
+# A function can have no content (hopefully temporaraly) by using the pass statement
+
+
+def emptyFunction():
+  pass
+
+print('emptyFunction():', emptyFunction())

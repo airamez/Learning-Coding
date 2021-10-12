@@ -13,7 +13,7 @@ def read_integer(prompt: str = "Type an integer number = ") -> int:
     """
     Read an integer number
     :param prompt: Input label
-    :return: An integer number type by the user
+    :return: An integer number
     """
     while True:
         try:

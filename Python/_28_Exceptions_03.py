@@ -1,31 +1,40 @@
-import random
-
 """
-The finally clause is optional however when present it is always executed, whether an exception has occurred or not.
-The finally clause is important to do clean-up code
-I tis possible
+It is possible to catch multiple exceptions 
 """
 
 
-def read_file(file_name: str) -> str:
-    """
-    Simulate an operation to read a file
-    :return: Fake content of a file
-    """
+def my_division(number_1: float, number_2: float) -> float:
     try:
-        print("Open file:", file_name)
-        for i in range(1, 15):
-            rnd = random.randint(1, 20)
-            if rnd <= 5:
-              raise Exception("Error reading the file: " + file_name)
-            else:
-              print("Read a record =", i)                
-        return "File content"
-    finally:
-        print("CLOSING FILE:", file_name)
+        return float(number_1) / float(number_2)
+    except ValueError:
+        raise Exception(f"Invalid parameters: {number_1}/{number_2}")
+    except ZeroDivisionError:
+        raise Exception(f"Division by zero: {number_1}/{number_2}")
 
 try:
-    file_content = read_file("my_file")
-    print("File Content", file_content)
-except Exception as error:
-    print("ERROR PROCESSING THE FILE =>", error)
+  print('my_division(10, 4) =', my_division(10, 4))
+except Exception as ex:
+  print("ERROR =>", ex)
+
+try:
+  div = my_division("Python", 2)
+except Exception as ex:
+  print("ERROR =>", ex)
+
+try:
+  div = my_division(10, 0)
+except Exception as ex:
+  print("ERROR =>", ex)
+
+while True:
+    try:
+        number1 = float(input("Number 1 = "))
+        number2 = float(input("Number 2 = "))
+        division = my_division(number1, number2)
+        print("Division = ", division)
+        break
+    except Exception as my_exception:
+      print("ERROR =>", my_exception)
+
+# An exception not caught will stop the program
+print('my_division("Python", 2) =', my_division("Python", 2))
