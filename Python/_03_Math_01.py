@@ -1,3 +1,5 @@
+#ATTENTION: Show debugger. main.py
+
 print("Math operations")
 print(10)
 print ("7 + 2 =", 7 + 2)

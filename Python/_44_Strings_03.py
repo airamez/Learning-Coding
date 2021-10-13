@@ -44,3 +44,9 @@ print("c =", s.count("c"))
 print("aaa =", s.count("aaa"))
 print("aaabbb =", s.count("aaabbb"))
 print("abbb a =", s.count("abbb a"))
+
+print("# replace")
+s = 'I love COBOL, because COBOL is so cool and everybody loves COBOL'
+print(s)
+s = s.replace('COBOL', 'Python') # Returns a new string
+print(s)

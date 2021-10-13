@@ -1,5 +1,4 @@
-import os, shutil
-
+import os
 
 print('os.name: ', os.name)
 currentDir = os.getcwd()
@@ -9,33 +8,40 @@ print('Folder Content')
 for entry in os.listdir():
   print(entry)
 
-dirName = 'os_demo'
+folderName = 'os_demo'
 
-if os.path.isdir(dirName): # Check if the folder exists
-  print(f'Deleting the existing folder: {dirName}')
-  shutil.rmtree(dirName) # Deletes a folder and all its contents
-  print('Folder deleted')
-print(f'creating a folder called "{dirName}"')
-os.mkdir(dirName) # Creates a folder
+if os.path.isdir(folderName): # Check if the folder exists
+  print(f'Folder already exists: {folderName}')
+else:
+  print(f'creating a folder called "{folderName}"')
+  os.mkdir(folderName) # Creates a folder
 
-print(f'Changing to the {dirName} folder')
-os.chdir(dirName) # Chancing to a folder
+print(f'Changing to the {folderName} folder')
+os.chdir(folderName) # Chancing to a folder
 
-print("current dir: ", os.getcwd())
-
-
-print('Returning to the parent folder')
-os.chdir('..')
 print("current dir: ", os.getcwd())
 
 print("Writing text to a file")
-file = open('log.txt', 'w+')
-
+file = open('log.txt', 'w+') # Open a file to write
 i = 1
+print('Type lines for a text file. Empty line to finish!')
 while (True):
   line = input(f'Line {i} = ')
   if not line:
     break
-  file.write(f'{i} {line}\n')
+  file.write(f'{i} {line}\n') # Writes to the text file
   i += 1
+file.close() # closed the file
+# ATTENTION: try... catch is required for a robust program
+
+print("Reading from a text file")
+
+file = open('log.txt', 'r') # Opens a file to read
+for line in file.readlines(): # Reads lines from a text file
+  print(line, end='')
+file.close()
+
+file = open('log.txt', 'r')
+content = file.read() # Reads the file content
+print(content)
 file.close()
