@@ -2,6 +2,7 @@
 Functions with typed parameters and typed return
 """
 
+
 # Providing the type of the parameters and return type
 def get_salutation(name: str, hour: int) -> str:
     """

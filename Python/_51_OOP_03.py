@@ -3,35 +3,35 @@
 # Protected attributes starts with _
 # Private attributes starts with __
 class Account:
-  '''Class representing a Bank Account'''
+    '''Class representing a Bank Account'''
+    def __init__(self, id: str, balance: float):
+        '''Constrcutor '''
+        self.__id = id  # private attribute
+        self.__balance = balance  # private attribute
 
-  def __init__(self, id: str, balance: float):
-    '''Constrcutor '''
-    self.__id = id # private attribute
-    self.__balance = balance # private attribute
+    def setId(self, id):
+        '''Set ID (Setter for ID)'''
+        self.__id = id
 
-  def setId(self, id):
-    '''Set ID (Setter for ID)'''
-    self.__id = id
-  
-  def getId(self):
-    '''Get ID (Getter for ID)'''
-    return self.__id
+    def getId(self):
+        '''Get ID (Getter for ID)'''
+        return self.__id
 
-  def getBalance(self):
-    '''Get Balance'''
-    return self.__balance
-  
-  def deposit(self, amount: float):
-    '''Deposit the amount to the Account balance '''
-    self.__balance += amount;
+    def getBalance(self):
+        '''Get Balance'''
+        return self.__balance
 
-  def withdraw(self, amount: float):
-    '''Withdraw the amount from the Account balance'''
-    self.__balance -= amount;
+    def deposit(self, amount: float):
+        '''Deposit the amount to the Account balance '''
+        self.__balance += amount
 
-  def __privateMethod(): # Private method
-    pass
+    def withdraw(self, amount: float):
+        '''Withdraw the amount from the Account balance'''
+        self.__balance -= amount
+
+    def __privateMethod():  # Private method
+        pass
+
 
 account_1 = Account(0, 1000)
 account_2 = Account(2, 2000)
@@ -49,18 +49,18 @@ print('Account 1: ', account_1.getId(), account_1.getBalance())
 
 print('Account 1: ', account_1.getId(), account_1.getBalance())
 try:
-  print('account_1.__balance =', account_1.__balance)
+    print('account_1.__balance =', account_1.__balance)
 except Exception as ex:
-  print('account_1.__balance is private: ', ex)
-  
+    print('account_1.__balance is private: ', ex)
+
 try:
-  account_1.__privateMethod()
+    account_1.__privateMethod()
 except Exception as ex:
-  print('account_1.__privateMethod is private: ', ex)
+    print('account_1.__privateMethod is private: ', ex)
 
 # As Python allow attributes to be created on the fly.
 # The operation below will create a different attribute
 # ATTENTION: Use the debugger to demonstrate
-account_1.__balance = 10000 # This will be a different attribute
+account_1.__balance = 10000  # This will be a different attribute
 print('account_1.__balance =', account_1.__balance)
 print('Account 1: ', account_1.getId(), account_1.getBalance())

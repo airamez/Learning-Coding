@@ -5,9 +5,11 @@ offer an built-in matrix component. Like Arrays it is possible to simulate an Ma
 """
 import random
 
-matrix = [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9]]
+matrix = [
+  [1, 2, 3], 
+  [4, 5, 6], 
+  [7, 8, 9]
+]
 
 print("#1 Using print with a 'matrix'")
 print('Type = ', type(matrix))

@@ -1,8 +1,8 @@
 phrase = "I Love Computer Programming"
 
 print("#1 Substring/Slicing")
-print(phrase[0: 1])
-print(phrase[2: 6])
+print(phrase[0:1])
+print(phrase[2:6])
 print(phrase[7:15])
 print(phrase[7:])
 print(phrase[:15])
@@ -45,7 +45,7 @@ print('Stripped =', stripped)
 not_stripped = "XXXXXXcodingXXX"
 stripped = not_stripped.strip("X")
 print('not_stripped =', not_stripped)
-print('stripped =',stripped)
+print('stripped =', stripped)
 not_stripped = "XYZXYZcodingXYZXYZ"
 stripped = not_stripped.strip("XYZ")
 print(not_stripped, ' = ', stripped)

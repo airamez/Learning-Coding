@@ -15,6 +15,7 @@ def repeat(string, times=10):  # Default parameter
         result += string
     return result
 
+
 print(repeat('*'))
 print(repeat('*', 5))
 print(repeat('*', 1))

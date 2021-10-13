@@ -8,7 +8,7 @@ while True:
     if my_string:
         my_list.append(my_string)
     else:
-      break
+        break
 
 print("List =", my_list)
 print("List length =", len(my_list))

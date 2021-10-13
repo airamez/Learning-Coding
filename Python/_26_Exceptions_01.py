@@ -17,10 +17,12 @@ def read_integer(prompt: str = "Type an integer number = ") -> int:
     """
     while True:
         try:
-            number = int(input(prompt)) # if the conversion to int fails, an exception will be reaised
+            # if the conversion to int fails, an exception will be reaised
+            number = int(input(prompt))
             return number
         except ValueError:
             print("Invalid number. Please try again!")
+
 
 my_int = read_integer()
 print("My int", my_int)

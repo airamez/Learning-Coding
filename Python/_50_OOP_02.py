@@ -1,9 +1,9 @@
 # Class and instance attributes
 class MyClass:
-  class_attribute = "Class Atribute"
+    class_attribute = "Class Atribute"
 
-  def __init__ (self, instance_attribute):
-    self.instance_attribute = instance_attribute
+    def __init__(self, instance_attribute):
+        self.instance_attribute = instance_attribute
 
 
 objectA = MyClass("Attribute A")

@@ -38,7 +38,7 @@ print("Set B =", set_b)
 
 # Union
 union = set.union(set_a, set_b)
-print("Union =",  union)
+print("Union =", union)
 
 # Difference A - B
 diff_a_b = set.difference(set_a, set_b)
@@ -59,6 +59,6 @@ for i in range(0, 10):
     found = rnd in set_a  # Check if an element exists in the Set
     print(f'{rnd} => ', end='')
     if (found):
-      print("Found")
+        print("Found")
     else:
-      print("Not Found")
+        print("Not Found")

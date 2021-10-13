@@ -12,7 +12,6 @@ Line 3
 Line 4
 '''
 print("Hello world with comments")
-
 """
 Multiple lines comment
 Line 1

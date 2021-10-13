@@ -2,7 +2,6 @@
 VARIABLES
 A computer is a special machine that operates on data (information) and variables are the basic structures to store data/information.
 """
-
 """
 IDENTIFIERS
 An identifier is a name used to identify something in a program.
@@ -35,8 +34,7 @@ print("approved =", approved)
 
 # String
 name = "José Maria"
-print ("name =", name)
+print("name =", name)
 
 last_name = 'Rodrigues Santos Júnior'
 print('full name =', name, last_name)
-

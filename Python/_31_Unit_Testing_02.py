@@ -28,11 +28,11 @@ Ideally the unit tests should be created even before we start to code a new func
 import unittest
 from _29_Unit_Testing_01 import factorial
 
-class MyUnitTesting (unittest.TestCase):
+
+class MyUnitTesting(unittest.TestCase):
     """
     Factorial Unit Testing
     """
-
     def test_01_fat_0(self):
         self.assertEqual(factorial(0), 1, "Zero Factorial")
 
@@ -55,7 +55,9 @@ class MyUnitTesting (unittest.TestCase):
         self.assertEqual(factorial(12), 479001600)
 
     def test_08_fat_50(self):
-        self.assertEqual(factorial(50), 30414093201713378043612608166064768844377641568960512000000000000)
+        self.assertEqual(
+            factorial(50),
+            30414093201713378043612608166064768844377641568960512000000000000)
 
     def test_09_fat_2_and_3(self):
         self.assertNotEqual(factorial(2), factorial(3))
@@ -68,6 +70,7 @@ class MyUnitTesting (unittest.TestCase):
     def test_fail(self):
         self.assertEqual(factorial(1), 2)
     '''
+
 
 # This is the statement that executes the Unit tests
 if __name__ == '__main__':

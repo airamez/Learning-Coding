@@ -18,7 +18,7 @@ print("Fullname:", first_name, last_name)
 # \' = Single quote
 # \" = Double Quotes
 # \\ = Backslash
-# 
+#
 phrase = 'The world\tis\tbeautifil'
 print("phrase:", phrase)
 

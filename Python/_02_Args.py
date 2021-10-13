@@ -1,4 +1,4 @@
-import sys # Importing a Python library
+import sys  # Importing a Python library
 
 #execute: python _02_Args Parameter_1 Parameter_2 'Parameter 3 with spaces'
 print('Argment count: ', len(sys.argv))

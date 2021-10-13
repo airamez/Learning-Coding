@@ -1,8 +1,10 @@
 # As python allow the "creation" of classe attributes on the fly
 # It is possible to use a empty class as an abstract type
 
+
 class Customer:
-  pass
+    pass
+
 
 customers = list()
 
@@ -26,4 +28,4 @@ customers.append(customer2)
 customers.append(customer3)
 
 for c in customers:
-  print(f"Name: {c.FistName} {c.LastName}; Email: {c.Email}")
+    print(f"Name: {c.FistName} {c.LastName}; Email: {c.Email}")

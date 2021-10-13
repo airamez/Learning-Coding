@@ -12,4 +12,3 @@ for i in range(0, len(s)):
 
 for i in range(371, 400):
     print(f"{i} = {chr(i)}")
-

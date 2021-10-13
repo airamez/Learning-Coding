@@ -22,8 +22,8 @@ print('len(full_name):', len(full_name))
 # Zero based: zero is the first index
 print("012345678910")
 print(full_name)
-print('full_name[0]:', full_name[0]) 
-print('full_name[5]',full_name[5])
+print('full_name[0]:', full_name[0])
+print('full_name[5]', full_name[5])
 
 # Negative indexes come from the end
 print('full_name[-1]:', full_name[-1])
@@ -48,7 +48,7 @@ print('full_name[0:100]:', full_name[0:100])
 #print(full_name[11])
 
 # String are immutable.
-# Try to assign a value to a index causes an error: 
+# Try to assign a value to a index causes an error:
 # 'str' object does not support item assignment
 # full_name[0] = 'j'
 # full_name[5] = 's'

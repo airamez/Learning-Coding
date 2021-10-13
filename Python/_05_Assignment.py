@@ -30,7 +30,7 @@ print("n1 after *2 =", n1)
 n1 /= 2
 print("n1 after /=2 =", n1)
 
-n1 = -n1;
+n1 = -n1
 print("n1 after -n1 =", n1)
 
 # THERE IS NO ++ OR -- IN PYTHON :)

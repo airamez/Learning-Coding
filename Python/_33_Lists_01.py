@@ -1,12 +1,13 @@
-
-months = ["January", "February", "March", "April", "May", "June",
-          "July", "August", "September", "October", "November", "December"]
+months = [
+    "January", "February", "March", "April", "May", "June", "July", "August",
+    "September", "October", "November", "December"
+]
 
 print('#1 Printing a list')
 print('Type =', type(months))
 print(months)
 for month in months:
-  print(f'{month}, ', end='')
+    print(f'{month}, ', end='')
 
 # Declaring List
 languages = list()
@@ -140,7 +141,7 @@ months = list(range(1, 13))
 print(months)
 
 print("\n#25 Initializing a list with range")
-even_from_1_10 = list(range(0,11, 2))
+even_from_1_10 = list(range(0, 11, 2))
 print(even_from_1_10)
 
 odd_from_1_10 = list(range(1, 11, 2))
@@ -153,7 +154,7 @@ full_list.extend(even_from_1_10)
 print(full_list)
 full_list.extend(odd_from_1_10)
 print(full_list)
-full_list.sort() # Sorting
+full_list.sort()  # Sorting
 print(full_list)
 
 # DANGER: Be careful when assiging values to a list because some functions doesn't return values and the list values will be lost

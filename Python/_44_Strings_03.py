@@ -10,9 +10,9 @@ print("# Find: Returns the index")
 print(phrase)
 print(phrase.find("Programming"))
 print(phrase.find("Coding"))
-print(phrase.find("m", 0)) # Find with start position
+print(phrase.find("m", 0))  # Find with start position
 print(phrase.find("m", 10))
-print(phrase.find("Love", 0, 10)) # Find with start and end position
+print(phrase.find("Love", 0, 10))  # Find with start and end position
 print(phrase.find("Love", 20, 25))
 
 print("# Right Find")
@@ -48,5 +48,5 @@ print("abbb a =", s.count("abbb a"))
 print("# replace")
 s = 'I love COBOL, because COBOL is so cool and everybody loves COBOL'
 print(s)
-s = s.replace('COBOL', 'Python') # Returns a new string
+s = s.replace('COBOL', 'Python')  # Returns a new string
 print(s)

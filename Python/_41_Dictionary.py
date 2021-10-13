@@ -1,6 +1,18 @@
 # Declaring a dictionary
-months = {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
-          7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"}
+months = {
+    1: "January",
+    2: "February",
+    3: "March",
+    4: "April",
+    5: "May",
+    6: "June",
+    7: "July",
+    8: "August",
+    9: "September",
+    10: "October",
+    11: "November",
+    12: "December"
+}
 print('Type = ', months)
 print(type(months))
 
@@ -9,7 +21,7 @@ print("Months =", months)
 
 print('\n#2 Acessing the key the keys')
 for key in months.keys():
-  print(f'{key}, ')
+    print(f'{key}, ')
 
 print('\n#3. Acessing the Values')
 print(months.values())
@@ -27,14 +39,14 @@ except KeyError as e:
 
 print("\n#6 Testing if a key exist before access")
 if 3 in months:
-  print(months[3])
+    print(months[3])
 else:
-  print('3 Not found')
+    print('3 Not found')
 
 if 99 in months.keys():
-  print(months[99])
+    print(months[99])
 else:
-  print('99 Not found')
+    print('99 Not found')
 
 print('\n#7 Accessing a value from a key using the get method')
 print("months.get(3) =", months.get(3))

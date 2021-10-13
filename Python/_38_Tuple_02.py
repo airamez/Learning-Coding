@@ -6,5 +6,6 @@ def integer_division(dividend: int, divisor: int) -> ():
     remainder = dividend % divisor
     return quotient, remainder
 
+
 division = integer_division(7, 3)
 print("7 // 4 => Quotient =", division[0], "Remainder =", division[1])

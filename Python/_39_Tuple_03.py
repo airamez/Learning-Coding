@@ -3,9 +3,9 @@ import random
 MIN = 0
 MAX = 99
 numbers_tuple = (random.randint(MIN, MAX), random.randint(MIN, MAX),
-           random.randint(MIN, MAX), random.randint(MIN, MAX),
-           random.randint(MIN, MAX), random.randint(MIN, MAX),
-           random.randint(MIN, MAX), random.randint(MIN, MAX))
+                 random.randint(MIN, MAX), random.randint(MIN, MAX),
+                 random.randint(MIN, MAX), random.randint(MIN, MAX),
+                 random.randint(MIN, MAX), random.randint(MIN, MAX))
 print(numbers_tuple)
 print("MAX =", max(numbers_tuple))
 print("MIN =", min(numbers_tuple))

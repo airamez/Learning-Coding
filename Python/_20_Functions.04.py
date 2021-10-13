@@ -12,8 +12,10 @@ def my_print(name: str, salary: float, age: int):
     print(f'{{"Name":{name}, "Salary":{salary}, "Age": {age}}}')
 
 
-return_value =  my_print("José Santos", 150000, 45)
-print(return_value) # Remember that every function in Python returns a value. None if not specified
+return_value = my_print("José Santos", 150000, 45)
+
+# Remember that every function in Python returns a value. None if not specified
+print(return_value)
 
 my_print(age=45, name="José Santos", salary=150000)
 

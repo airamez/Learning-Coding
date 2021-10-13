@@ -23,6 +23,7 @@ def average(number1, number2, number3):
     """
     return (number1 + number2 + number3) / 3
 
+
 # Try to re-type the first parentesis and observe the documentation
 print(average(5, 15, 25))
 print(average(15, 25, 5))

@@ -24,7 +24,7 @@ print("sum =",x+y)
 code = compile(code_str, 'sum.py', 'exec')
 exec(code)
 
-print('divmode(7,2) =', divmod(7,2))
+print('divmode(7,2) =', divmod(7, 2))
 
 x = 1
 print('eval("x + 2") =', eval("x + 2"))

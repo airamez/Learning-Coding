@@ -3,6 +3,7 @@ A module is just a file with functions that we can referenced from other Python 
 When we import a module the function names must have the module name plus . as a suffix: module.function
 """
 
+
 def increase_salary(current_salary, increase_percent):
     """
     Increase a salary based on a percentage value
@@ -10,7 +11,7 @@ def increase_salary(current_salary, increase_percent):
     :param increase_percent: increase percentage value
     :return: increased salary
     """
-    return current_salary  + current_salary * increase_percent / 100
+    return current_salary + current_salary * increase_percent / 100
 
 
 def add_bonus(current_salary, age, years_of_work, dependents):

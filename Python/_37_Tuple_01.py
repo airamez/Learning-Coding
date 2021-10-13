@@ -1,8 +1,8 @@
 """
 A tuple is basic the same as a list however the elements are immutable.
 """
-months = ("January", "February", "March", "April", "May", "June",
-          "July", "August", "September", "October", "November", "December")
+months = ("January", "February", "March", "April", "May", "June", "July",
+          "August", "September", "October", "November", "December")
 
 print('Type =', type(months))
 print(months)
@@ -21,6 +21,6 @@ while True:
         break
     month = int(month)
     if 1 <= month <= 12:
-        print(months[month-1])
+        print(months[month - 1])
     else:
         print("Invalid month")
