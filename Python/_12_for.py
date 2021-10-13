@@ -12,7 +12,7 @@ for i in range(0, 10):
     print(f'{i}, ', end='')
     # All commands aligned inside the for it part of the for loopingprint("This is after the for")
 
-print('Only ODD')
+print('\nOnly ODD')
 for i in range(0, 10):
     if i % 2 == 0:
         print(f'{i}, ', end='')
@@ -47,5 +47,4 @@ for i in range(start, end + 1):
 '''
 Practices:
 1 - Read two integer numbers representing an interval and print all numbers in the interval
-2 - 
 '''

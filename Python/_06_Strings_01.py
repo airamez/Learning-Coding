@@ -13,7 +13,7 @@ print("Fullname:", first_name, last_name)
 
 #
 # Escape characters
-# \t = Tat
+# \t = Tab
 # \n = New line
 # \' = Single quote
 # \" = Double Quotes

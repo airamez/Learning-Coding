@@ -31,7 +31,7 @@ print('full_name[-2]:', full_name[-2])
 print('full_name[-3]', full_name[-3])
 
 # Slicing (VERY POWERFUL)
-# strin[start, end]: start inclusive; end exclusive
+# string[start, end]: start inclusive; end exclusive
 # |0|1|2|3|4|5|6|7|8|9|10
 # |J|o|s|e| |S|a|n|t|o|s
 #  ...-9-8-7-6-5-4-3-2-1
@@ -40,7 +40,6 @@ print('full_name[:5]:', full_name[:5])
 print('full_name[5:]:', full_name[5:])
 print('full_name[2:7]:', full_name[2:7])
 print('full_name[1:-1]:', full_name[1:-1])
-print('full_name[5:]: ', full_name[5:])
 
 # The slicing doesn't not raise exception with invalid indexes
 print('full_name[0:100]:', full_name[0:100])
