@@ -11,7 +11,7 @@ print('any([True, True, True]) =', any([True, True, True]))
 print('any([True, True, True]) =', any([False, False, False]))
 
 # printable representation of an object
-print("ascii(['Jose', 'Leila', 'Artur'])=", ascii(['Jose', 'Leila', 'Artur']))
+print("ascii =", ascii(['Jose', 'Leila', 'Artur']))
 
 print('chr(65) =', chr(65))
 
@@ -24,7 +24,9 @@ print("sum =",x+y)
 code = compile(code_str, 'sum.py', 'exec')
 exec(code)
 
+# divmod
 print('divmode(7,2) =', divmod(7, 2))
 
+# eval
 x = 1
 print('eval("x + 2") =', eval("x + 2"))

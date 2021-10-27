@@ -16,12 +16,12 @@ def read_integer(prompt: str = "Type an integer number = ") -> int:
     :return: An integer number
     """
     while True:
-        try:
-            # if the conversion to int fails, an exception will be reaised
-            number = int(input(prompt))
-            return number
-        except ValueError:
-            print("Invalid number. Please try again!")
+      try:
+          # if the conversion to int fails, an exception will be reaised
+          number = int(input(prompt))
+          return number
+      except ValueError:
+          print("Invalid number. Please try again!")
 
 
 my_int = read_integer()
