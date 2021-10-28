@@ -31,3 +31,6 @@ print("Only string")
 for i in range(0, len(my_list)):
     if isinstance(my_list[i], str):
         print(i, my_list[i], type(my_list[i]))
+
+for item in my_list:
+  print(item)

@@ -1,6 +1,11 @@
 phrase = "I Love Computer Programming"
 
-print("#1 Substring/Slicing")
+print("#0 Split")
+words = phrase.split()
+print(words)
+
+
+print("\n#1 Substring/Slicing")
 print(phrase[0:1])
 print(phrase[2:6])
 print(phrase[7:15])
@@ -85,3 +90,7 @@ s = "+7.45"
 print(s.zfill(10))
 s = "-7.45"
 print(s.zfill(10))
+
+print("\n15 swapcase")
+word = 'AbCdEfGhI'
+print(word, word.swapcase())

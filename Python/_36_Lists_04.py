@@ -17,7 +17,7 @@ print(matrix)
 
 print("\n#2 Printing a matrix")
 for i in range(0, len(matrix)):
-    for j in range(0, len(matrix[0])):
+    for j in range(0, len(matrix[i])):
         print(matrix[i][j], "", end="")
     print()
 
