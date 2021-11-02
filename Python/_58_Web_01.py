@@ -17,3 +17,9 @@ file = open('urls_from_cnn.txt', 'w+')
 for url in urls:
     file.write(f'{url}\n')
 file.close()
+
+'''
+Practices: 
+Create a new program do recusivelly keep requesting all recovered URL
+ATTENTION: Pay attention for potential risks
+'''

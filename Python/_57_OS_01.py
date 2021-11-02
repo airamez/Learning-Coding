@@ -17,7 +17,7 @@ else:
     os.mkdir(folderName)  # Creates a folder
 
 print(f'Changing to the {folderName} folder')
-os.chdir(folderName)  # Chancing to a folder
+os.chdir(folderName)  # Changing to a folder
 
 print("current dir: ", os.getcwd())
 
