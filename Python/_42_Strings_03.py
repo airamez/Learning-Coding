@@ -10,5 +10,6 @@ print(s)
 for i in range(0, len(s)):
     print(f"{s[i]} = {ord(s[i])}")
 
+print()
 for i in range(371, 400):
     print(f"{i} = {chr(i)}")

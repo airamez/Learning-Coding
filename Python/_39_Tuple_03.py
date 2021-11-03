@@ -6,6 +6,8 @@ numbers_tuple = (random.randint(MIN, MAX), random.randint(MIN, MAX),
                  random.randint(MIN, MAX), random.randint(MIN, MAX),
                  random.randint(MIN, MAX), random.randint(MIN, MAX),
                  random.randint(MIN, MAX), random.randint(MIN, MAX))
+
+# Min and Max
 print(numbers_tuple)
 print("MAX =", max(numbers_tuple))
 print("MIN =", min(numbers_tuple))

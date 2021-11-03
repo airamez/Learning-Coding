@@ -39,6 +39,8 @@ print("".isalpha())
 print("\n#5 Is Numeric")
 print("123456789".isnumeric())
 print("12334abc".isnumeric())
+print(" 123 ".isnumeric())
+print(" ".isnumeric())
 print("".isnumeric())
 
 print("\n#6 Is Space")

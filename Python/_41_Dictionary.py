@@ -24,7 +24,8 @@ for key in months.keys():
     print(f'{key}, ')
 
 print('\n#3. Acessing the Values')
-print(months.values())
+for value in months.values():
+  print(value)
 
 print('\n#4 Accessing element using the key')
 print("months[3] =", months[3])
@@ -96,7 +97,7 @@ countries["MEX"] = "Mexico"
 print('\n#13 Testing if a a Key exists in the Dictionary')
 print("Countries =", countries)
 print("BRA = ", countries["BRA"])
-if "CAN" in countries.keys:
+if "CAN" in countries.keys():
     print(countries["CAN"])
 if "BR" not in countries:
     print("BR not found")

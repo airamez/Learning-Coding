@@ -8,4 +8,5 @@ def integer_division(dividend: int, divisor: int) -> ():
 
 
 division = integer_division(7, 3)
+print(type(division))
 print("7 // 4 => Quotient =", division[0], "Remainder =", division[1])
