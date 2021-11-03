@@ -7,7 +7,7 @@ print('#1 Printing a list')
 print('Type =', type(months))
 print(months)
 for month in months:
-    print(f'{month}, ', end='')
+    print(month)
 
 # Declaring List
 languages = list()
@@ -26,7 +26,7 @@ languages.append("COBOL")
 print("\n#2 Printing the List")
 print(languages)
 
-print("\n#3 List size")
+print("\n#3 List length")
 print("List length =", len(languages))
 print("List length =", languages.__len__())
 
@@ -38,13 +38,14 @@ print("\n#5 Printing the List in reversed order")
 for i in range(len(languages) - 1, -1, -1):
     print(i, "=", languages[i])
 
-first = 0
-print("\n#6 First element index = ", first)
-print("First:", languages[first])
+first_index = 0
+print("\n#6 First element index = ", first_index)
+print("First:", languages[first_index])
 
-last = len(languages) - 1
-print("\n#7 Last element index = ", last)
-print("Last:", languages[last])
+last_index = len(languages) - 1
+print("\n#7 Last element index = ", last_index)
+print("Last:", languages[last_index])
+print("Last:", languages[-1])
 
 print("\n#8 Count")
 pythonCount = languages.count("Python")
@@ -60,12 +61,12 @@ removed = languages.pop(3)
 print("Removed element at index 3 =", removed)
 print(languages)
 
-print("\n#11 Removing the last element")
+print("\n#11 Removing the last_index element")
 removed = languages.pop()
 print("Removed element =", removed)
 print(languages)
 
-print("\n#12 Removing the first occurrence of a element based on the value")
+print("\n#12 Removing the first_index occurrence of a element based on the value")
 languages.remove("Python")
 print("First Python removed")
 print(languages)
@@ -79,10 +80,10 @@ except ValueError as e:
 print("\n#14 Inserting an element at a specific index")
 languages.insert(0, "Delphi")
 languages.insert(4, "Lua")
-languages.insert(len(languages), "Python")  # Insert at last index == Append
+languages.insert(len(languages), "Python")  # Insert at last_index index == Append
 print(languages)
 
-print("\n#15 Finding the first index of an element")
+print("\n#15 Finding the first_index index of an element")
 first_python = languages.index("Python")
 print("First Python =", first_python)
 
