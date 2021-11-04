@@ -56,6 +56,7 @@ class Square(Shape):
 
 
 circle = Circle('Blue', 2, Point(0, 0), 35.7)
+print(circle.borderColor) # Got this from Shape
 circle.draw()
 print('circle.Diameter: ', circle.Diameter)
 

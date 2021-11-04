@@ -7,6 +7,118 @@
         "version": 39,
         "index": 0
       }
+    ],
+    "Python/_34_Lists_02.py": [
+      {
+        "id": "c7f09100-e1ba-4bd3-af0b-15929b7abfbf",
+        "line": 2,
+        "version": 8,
+        "index": 19
+      }
+    ],
+    "Python/_35_Lists_03.py": [
+      {
+        "id": "899fe374-24f8-4f02-a731-a1857cc82ce6",
+        "line": 1,
+        "version": 41,
+        "index": 0
+      },
+      {
+        "id": "27208ac2-db4a-443a-9118-5591896c16f1",
+        "line": 20,
+        "version": 41,
+        "index": 360
+      },
+      {
+        "id": "02c37a1f-4b09-4bdf-a394-747af4cb6447",
+        "line": 25,
+        "version": 41,
+        "index": 499
+      },
+      {
+        "id": "191a6446-a5e4-47c1-8fbf-432fc4437136",
+        "line": 30,
+        "version": 41,
+        "index": 638
+      },
+      {
+        "id": "fdca955d-2ed1-4b4c-9a22-0980c6863b63",
+        "line": 35,
+        "version": 41,
+        "index": 776
+      }
+    ],
+    "Python/_36_Lists_04.py": [
+      {
+        "id": "56110906-24f6-429b-8130-fa4be33cee86",
+        "line": 45,
+        "version": 56,
+        "index": 1114
+      }
+    ],
+    "Python/_37_Tuple_01.py": [
+      {
+        "id": "4241d484-719a-4d63-9e34-0384ac0f4a46",
+        "line": 4,
+        "version": 2,
+        "index": 80
+      }
+    ],
+    "Python/_38_Tuple_02.py": [
+      {
+        "id": "38f166c6-f14c-435f-8f71-fded1bf4f517",
+        "line": 10,
+        "version": 20,
+        "index": 211
+      }
+    ],
+    "Python/_39_Tuple_03.py": [
+      {
+        "id": "373b9d8c-fb8b-4858-8440-6bf7e53d47fc",
+        "line": 3,
+        "version": 25,
+        "index": 15
+      }
+    ],
+    "Python/_40_Set.py": [
+      {
+        "id": "32b50b0b-4584-4c99-875e-c14176aca898",
+        "line": 4,
+        "version": 2,
+        "index": 33
+      },
+      {
+        "id": "4df912c6-4685-443e-8038-eb90cb062416",
+        "line": 34,
+        "version": 2,
+        "index": 802
+      },
+      {
+        "id": "27281152-bfd3-43b3-a3aa-c0ae33244a45",
+        "line": 40,
+        "version": 2,
+        "index": 908
+      }
+    ],
+    "Python/_41_Dictionary.py": [
+      {
+        "id": "cc1e4d20-f68c-4638-8d1a-ad7fcb5f43a0",
+        "line": 16,
+        "version": 39,
+        "index": 246
+      },
+      {
+        "id": "1bc1ea71-0a6e-4de1-a080-baeeadab7b00",
+        "line": 26,
+        "version": 39,
+        "index": 442
+      },
+      {
+        "id": "dcd6a4af-59a1-4ccd-8565-b8c839da2998",
+        "line": 30,
+        "version": 39,
+        "index": 523
+      }
     ]
   }
 }
