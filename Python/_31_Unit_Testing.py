@@ -26,7 +26,7 @@ Ideally the unit tests should be created even before we start to code a new func
 """
 
 import unittest
-from _30_Unit_Testing_01 import factorial
+from _30_Unit_Testing import factorial
 
 
 class MyUnitTesting(unittest.TestCase):

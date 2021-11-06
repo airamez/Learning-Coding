@@ -1,4 +1,4 @@
 Register on both sites below and start with the easy questions.
 As you feel more confortable change to medium and hard.
+https://leetcode.com/ (I think this one is better)
 https://www.hackerrank.com/
-https://leetcode.com/
