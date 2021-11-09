@@ -55,13 +55,15 @@ employees = []
 employees.append(Employee('Jose', 'IT', 150000))
 employees.append(Employee('Leila', 'RH', 250000))
 employees.append(Employee('Artur', 'R&D', 750000))
+employees.append(Employee('Thor', 'R&D', 750000))
+employees.append(Employee('Maya', 'R&D', 750000))
 
 print(employees)
 
 employees.sort(key = lambda e: e.name) # Sort by name
 print(employees)
 
-employees.sort(key = lambda e: e.dept) # Sort by dept
+employees.sort(key = lambda e: (e.dept, e.name)) # Sort by dept and name
 print(employees)
 
 employees.sort(key = lambda e: e.salary) # Sort by salary

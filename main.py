@@ -1,1 +1,1 @@
-import Python._58_Collections
+import Python._42_Strings

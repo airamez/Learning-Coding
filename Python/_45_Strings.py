@@ -91,6 +91,25 @@ print(s.zfill(10))
 s = "-7.45"
 print(s.zfill(10))
 
-print("\n15 swapcase")
+print("\n#15 swapcase")
 word = 'AbCdEfGhI'
 print(word, word.swapcase())
+
+print("\n#16 Join")
+namesList = list()
+namesList.append('Jose')
+namesList.append('Leila')
+namesList.append('Artur')
+namesStr = ','.join(namesList)
+print(namesList)
+print(namesStr)
+
+print("\n#17 Sorting")
+s = "lpoimjknbgtrsfdvcxaz"
+print(type(s), s)
+s = sorted(s)
+print(type(s), s)
+s = "".join(s)
+print(type(s), s)
+s = "".join(sorted(s, reverse=True))
+print(type(s), s)
