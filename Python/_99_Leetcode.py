@@ -103,3 +103,26 @@ def mergeTwoLists(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optio
         l2 = l2.next
         last = last.next
     return head
+
+# https://leetcode.com/problems/merge-sorted-array
+def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+    if m == 0:
+        nums1.extend(nums2)
+    if n == 0:
+        return
+    del nums1[m:]
+    i1 = 0
+    i2 = 0
+    while i1 < len(nums1) and i2 < len(nums2):
+        if nums2[i2] < nums1[i1]:
+            nums1.insert(i1, nums2[i2])
+            i1 += 1
+            i2 += 1
+        else:
+            i1 += 1
+    if i2 < len(nums2):
+        for i in range(i2, len(nums2)):
+            nums1.insert(i1 + 1, nums2[i])
+            i1 += 1
+
+#
