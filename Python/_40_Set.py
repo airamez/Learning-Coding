@@ -62,3 +62,9 @@ for i in range(0, 10):
         print("Found")
     else:
         print("Not Found")
+
+# Creating a set from a list
+numbers = [5, 7, 6, 2, 2, 3, 4, 5, 4, 3, 4, 1]
+unique_numbers = set(numbers)
+print(numbers)
+print(unique_numbers)
