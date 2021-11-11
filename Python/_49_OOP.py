@@ -25,8 +25,7 @@ print(myObject.attribute_1)
 
 #A class with constructor
 class MyClass:
-    def __init__(self, attribute_1,
-                 attribute_2):  # Definition of a constructor method
+    def __init__(self, attribute_1, attribute_2):  # Definition of a constructor method
         self.attribute_1 = attribute_1
         self.attribute_2 = attribute_2
 

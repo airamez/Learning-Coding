@@ -4,7 +4,6 @@ from typing import List, Optional
 def isBadVersion(version):
   pass
 
-
 def firstBadVersion(self, n):
     left = 1
     right = n
@@ -17,6 +16,15 @@ def firstBadVersion(self, n):
                 return mid
         else:
             left = mid + 1
+
+# https://leetcode.com/problems/contains-duplicate/
+def containsDuplicate(self, nums: List[int]) -> bool:
+    s = set()
+    for i in range(0, len(nums)):
+        if nums[i] in s:
+            return True
+        s.add(nums[i])
+    return False
 
 # https://leetcode.com/problems/binary-search/
 def search(self, nums: List[int], target: int) -> int:
@@ -125,4 +133,25 @@ def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
             nums1.insert(i1 + 1, nums2[i])
             i1 += 1
 
-#
+# https://leetcode.com/problems/longest-common-prefix
+class Solution:
+  
+  def get_prefix(self, s1, s2):
+      i = 0;
+      while i < len(s1) and i < len(s2):
+          if s1[i] != s2[i]:
+              break
+          i += 1
+      return s1[0:i]
+  
+  def longestCommonPrefix(self, strs: List[str]) -> str:
+      if len(strs) < 1:
+          return ''
+      if len(strs) == 1:
+          return strs[0]
+      prefix = strs[0]
+      for i in range(1, len(strs)):
+          prefix = self.get_prefix(prefix, strs[i])
+          if not prefix:
+              return ''
+      return prefix

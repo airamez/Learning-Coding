@@ -4,6 +4,7 @@ import random
 prime_numbers = {1, 2, 3, 5, 7, 11, 17, 1, 2, 3, 5}
 print("Type: ", type(prime_numbers))
 print("Prime Number =", prime_numbers)
+print(len(prime_numbers))
 
 # Using just {} does not create a Set but a Dictionary instead
 not_a_set = {}
