@@ -145,6 +145,15 @@ Creates a list of elements for which a function returns true
 result = list(filter(lambda e: expression(e), input_list))
 ```
 
+# Zip Function
+The zip(lists) function returns a zip object, which is an iterator of tuples where the first item in each passed iterator is paired together, and then the second item in each passed iterator are paired together etc.
+```
+names = ['Jose', 'Leila', 'Artur']
+ages = [49, 44, 19]
+for name, age in zip(names, ages):
+  print(name, 'is', age, 'years old')
+```
+
 # Class
 ```
 class ClassName:
