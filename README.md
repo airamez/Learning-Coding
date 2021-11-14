@@ -181,7 +181,7 @@ raise Exception(exception_details)
 
 ## Set
 | Description  | Code |
-|---|---|---|
+|---|---|
 | Constructor | ```set() or set(list)``` |
 | Union |``` set.union(a,b)``` |
 | Difference | ```set.difference(a,b)``` |
@@ -190,7 +190,7 @@ raise Exception(exception_details)
 
 ## Dictionary
 | Description | Code
-|---|---|---|
+|---|---|
 | Constructor | ```dict()``` |
 | Keys| ```keys()``` |
 | Check if key exists | ```k in dict.keys()``` |
