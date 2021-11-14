@@ -4,7 +4,7 @@ Introduction to computer programming using Python
 ## Content
 | Description | File |
 | --- | --- |
-| Intro | [__Python.txt](Learning-Coding/Python/__Python.txt) |
+| Intro | [__Python.txt](Python/__Python.txt) |
 | Hello World | _00_HelloWorld.Python |
 | Comments | _01_Comments.py |
 | Command line argments | _02_Args.py |
