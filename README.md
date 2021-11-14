@@ -7,12 +7,6 @@ Introduction to computer programming using Python
 - bool
 - str
 
-# Null value
-- None
-```
-Check null: variable/expression is None
-```
-
 # Integer division:
 | Description | Code |
 | --- | --- |
@@ -39,6 +33,14 @@ else:
 # Inline
 [result if true] if [logical_expression] else [result if false]
 
+```
+
+# Null value
+- None
+```
+# Check null: 
+if variable/expression is None:
+  # statements
 ```
 
 # For looping
@@ -130,6 +132,18 @@ raise Exception(exception_details)
 | Remove with default | ```dict.pop(key, [default]))``` |
 | Keys in inserted order | ```list(dictionary)``` |
 | Looping | ```for key, value in dictionary:``` |
+
+# Map Function
+Applies a function to all elements in a list and returns a new list
+```
+result = list(map(lambda e: function(e), input_list))
+```
+
+# Filter Function
+Creates a list of elements for which a function returns true
+```
+result = list(filter(lambda e: expression(e), input_list))
+```
 
 # Class
 ```
