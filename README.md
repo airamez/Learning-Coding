@@ -4,7 +4,7 @@ Introduction to computer programming using Python
 ## Content
 | Description | File |
 | --- | --- |
-| Intro | [__Python.txt] (Learning-Coding/Python/__Python.txt) |
+| Intro | [__Python.txt](Learning-Coding/Python/__Python.txt) |
 | Hello World | _00_HelloWorld.Python |
 | Comments | _01_Comments.py |
 | Command line argments | _02_Args.py |
@@ -186,7 +186,7 @@ raise Exception(exception_details)
 | Union |``` set.union(a,b)``` |
 | Difference | ```set.difference(a,b)``` |
 | Intersection | ```set.intersection(a,b)``` |
-| Check if exists | ```element in set``` |
+| Check if element exists | ```element in set``` |
 
 ## Dictionary
 | Description | Code
