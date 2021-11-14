@@ -20,21 +20,22 @@ def       for       lambda    try
 
 # Integer
 age = 44  # Declaring and assigning an integer value
-print('age = ', age)  # Prints to the default output
+print(type(age), 'age = ', age)  # Prints to the default output
 
 # Floating point
 payment = 345.67
-print('payment = ', payment)
+print(type(payment), 'payment = ', payment)
 
 # Boolean
 approved = True
+print(type(approved))
 print("approved =", approved)
 approved = False
 print("approved =", approved)
 
 # String
 name = "José Maria"
-print("name =", name)
+print(type(name), "name =", name)
 
 last_name = 'Rodrigues Santos Júnior'
 print('full name =', name, last_name)

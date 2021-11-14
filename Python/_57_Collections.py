@@ -1,4 +1,13 @@
 '''
+Looping through multiple list using zip()
+'''
+names = ['Jose', 'Leila', 'Artur']
+ages = [49, 44, 19]
+for name, age in zip(names, ages):
+  print(name, 'is', age, 'years old')
+
+
+'''
 Lambda expression
 A lambda function is a small anonymous function.
 A lambda function can take any number of arguments, but can only have one expression.
