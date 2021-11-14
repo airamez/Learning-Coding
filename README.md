@@ -1,25 +1,96 @@
 # Learning-Coding
 Introduction to computer programming using Python
 
-# Basic Types:
+## Content
+| Description | File |
+| --- | --- |
+| Intro | [__Python.txt] (Learning-Coding/Python/__Python.txt) |
+| Hello World | _00_HelloWorld.Python |
+| Comments | _01_Comments.py |
+| Command line argments | _02_Args.py |
+| Basic math operations | _03_Math.py | 
+| Variables | _04_Variables.py | 
+| Assignments | _05_Assignment.py | 
+| Strings | _06_Strings.py | 
+| Strings | _07_Strings.py | 
+| Input | _08_Input.py | 
+| Output | _09_Output.py | 
+| Logical Expressions | _10_LogicalExpressions.py | 
+| If | _11_if.py | 
+| For | _12_for.py | 
+| While | _13_while.py | 
+| Break and Continue| _14_break_continue.py | 
+| For and While Demo| _15_for_while_demo.py | 
+| Practices | _16_Practice.txt | 
+| Functions | _17_Functions.py | 
+| Functions | _18_Functions.py | 
+| Functions | _19_Functions.py | 
+| Functions | _20_Functions.py | 
+| Functions | _21_Functions.py | 
+| Modules | _22_Modules.py | 
+| Modules | _23_Modules.py | 
+| Modules | _24_Modules.py | 
+| Modules | _25_Modules.py | 
+| Exceptions | _26_Exceptions.py | 
+| Exceptions | _27_Exceptions.py | 
+| Exceptions | _28_Exceptions.py | 
+| Exceptions | _29_Exceptions.py | 
+| Unit testing | _30_Unit_Testing.py | 
+| Unit testing | _31_Unit_Testing.py | 
+| Collections | _32_Collections.txt | 
+| List | _33_Lists.py | 
+| List | _34_Lists.py | 
+| List | _35_Lists.py | 
+| List | _36_Lists.py | 
+| Tuple | _37_Tuple.py | 
+| Tuple | _38_Tuple.py | 
+| Tuple | _39_Tuple.py | 
+| Set | _40_Set.py | 
+| Dictionary | _41_Dictionary.py | 
+| Strings | _42_Strings.py | 
+| Strings | _43_Strings.py | 
+| Strings | _44_Strings.py | 
+| Strings | _45_Strings.py | 
+| Practices | _46_Practices.txt | 
+| Math | _47_Math.py | 
+| Build-in Functions | _48_BuiltInFunctions.py | 
+| Object Oriented Programming | _49_OOP.py | 
+| Object Oriented Programming | _50_OOP.py | 
+| Object Oriented Programming | _51_OOP.py | 
+| Object Oriented Programming | _52_OOP.py | 
+| Object Oriented Programming | _53_OOP.py | 
+| Object Oriented Programming | _54_OOP.py | 
+| Object Oriented Programming | _55_OOP.py | 
+| Object Oriented Programming | _56_OOP.py | 
+| Collections | _57_Collections.py | 
+| Operational System Library | _59_OS.py | 
+| Web Library | _60_Web.py | 
+| Counter Collection | _61_Counter.py | 
+| Named Tuple Collections | _62_NamedTuple.py | 
+| Ordered Dictionary Collection | _63_OrderedDict.py | 
+| Practices | _99_Practices.py | 
+
+## Cheatsheet
+
+## Basic Types:
 - int
 - float
 - bool
 - str
 
-# Integer division:
+## Integer division:
 | Description | Code |
 | --- | --- |
 | Div A per B | ```A // B``` |
 | Mod A per B | ```A % B``` |
 | Div and Mod of A per B | ```div, mod = divmod(A, B)```
 
-# Length of string or collection:
+## Length of string or collection:
 ```
 len(string/collection)
 ```
 
-# If statement
+## If statement
 ```
 if [logical_expression]:
   # statements
@@ -30,20 +101,20 @@ elif [logical_expression]:
 else:
   # statements
 
-# Inline
+## Inline
 [result if true] if [logical_expression] else [result if false]
 
 ```
 
-# Null value
+## Null value
 - None
 ```
-# Check null: 
+## Check null: 
 if variable/expression is None:
   # statements
 ```
 
-# For looping
+## For looping
 ```
   for i in range(0, len(collection)):
     # statements
@@ -51,17 +122,17 @@ if variable/expression is None:
     # statements
 ```
 
-# While looping
+## While looping
 ```
 while [logical_expression]:
   # statements
 ```
 
-# Break and Continue Looping
+## Break and Continue Looping
 - break
 - continue
 
-# Functions
+## Functions
 ```
 def function_name (params list):
   # Function Body
@@ -73,7 +144,7 @@ def function_name (param1: type, param2: type) -> return_type:
 
 ```
 
-# Exceptions
+## Exceptions
 ```
 try:
   # statements
@@ -86,11 +157,11 @@ else: # only excecuted if no exceptions
 finally: # always executed
   # statements
 
-# Raise exception
+## Raise exception
 raise Exception(exception_details)
 ```
 
-# List
+## List
 | Description  | Code |
 |---|---|
 | Constructor |```[] or list()``` |
@@ -108,7 +179,7 @@ raise Exception(exception_details)
 | Count elements | ```count(e)``` |
 | Reverse | ```reverse()``` |
 
-# Set
+## Set
 | Description  | Code |
 |---|---|---|
 | Constructor | ```set() or set(list)``` |
@@ -117,7 +188,7 @@ raise Exception(exception_details)
 | Intersection | ```set.intersection(a,b)``` |
 | Check if exists | ```element in set``` |
 
-# Dictionary
+## Dictionary
 | Description | Code
 |---|---|---|
 | Constructor | ```dict()``` |
@@ -133,19 +204,19 @@ raise Exception(exception_details)
 | Keys in inserted order | ```list(dictionary)``` |
 | Looping | ```for key, value in dictionary:``` |
 
-# Map Function
+## Map Function
 Applies a function to all elements in a list and returns a new list
 ```
 result = list(map(lambda e: function(e), input_list))
 ```
 
-# Filter Function
+## Filter Function
 Creates a list of elements for which a function returns true
 ```
 result = list(filter(lambda e: expression(e), input_list))
 ```
 
-# Zip Function
+## Zip Function
 The zip(lists) function returns a zip object, which is an iterator of tuples where the first item in each passed iterator is paired together, and then the second item in each passed iterator are paired together etc.
 ```
 names = ['Jose', 'Leila', 'Artur']
@@ -154,7 +225,7 @@ for name, age in zip(names, ages):
   print(name, 'is', age, 'years old')
 ```
 
-# Class
+## Class
 ```
 class ClassName:
   # Constructor
