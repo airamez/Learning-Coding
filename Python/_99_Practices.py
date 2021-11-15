@@ -185,3 +185,34 @@ def process (expression: list) -> float:
 print(process([15, 7, 1, 1, '+', '-', '/', 3, '*', 2, 1, 1, '+', '+', '-']))
 print(process([5, 3, '+']))
 
+# https://leetcode.com/problems/merge-intervals/submissions/
+def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+    if not intervals or len(intervals) == 1:
+        return intervals
+    result = []
+    intervals.sort()
+    result.append(intervals[0])
+    for start, end in intervals[1:]:
+        current = result[-1]
+        if (start <= current[1]):
+            current[1] = max(end, current[1])
+        else:
+            result.append([start, end])
+    return result
+
+# https://leetcode.com/problems/swap-nodes-in-pairs/submissions/
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if (not head) or (not head.next):
+            return head
+        left = head
+        right = head.next
+        while left and right:
+            left.val, right.val = right.val, left.val
+            if not right.next:
+                break
+            left = right.next
+            if left and left.next:
+                right = left.next
+            else:
+                break
+        return head

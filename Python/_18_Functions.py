@@ -1,5 +1,5 @@
 """
-Functions with default parameter
+Function with default parameter
 """
 
 
@@ -25,3 +25,14 @@ print(repeat(' ', 35), end='')
 print('This is a function in action')
 print(repeat('=', 80))
 print(repeat('='))
+
+"""
+Function with undefined list of parameters
+"""
+
+def my_print(*values):
+  for v in values:
+    print(v) 
+
+my_print('José')
+my_print('José', 'Leila', 'Artur')
