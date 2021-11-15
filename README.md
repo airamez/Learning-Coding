@@ -301,7 +301,7 @@ obj = ClassName(param1, param2)
 
 **Note:** It is strange if you comming from Java or C# but python automatically creates the attributes assigned inside the constructor
 
-## Class with encapsulation
+## Class with encapsulation using setters and getters
 ```
 class Account:
     def __init__(self, id: str, balance: float):
@@ -327,3 +327,77 @@ class Account:
         pass
 ```
 **Note:** The double underscore makes a member private
+
+## Class with encapsulation using Properties
+```
+class Account:
+    '''Class representing a Bank Account'''
+    def __init__(self, id: str, balance: float):
+        self.__id = id  # private attribute
+        self.__balance = balance  # private attribute
+
+    # Defining a property for ID
+    @property
+    def id(self):
+        return self.__id
+
+    @id.setter
+    def id(self, value):
+        if not value or not value.strip():
+            raise ValueError("Account Id is required")
+        self.__id = value
+
+    @property  # balance has no setter (The power of encapualation)
+    def balance(self):
+        return self.__balance
+
+    def deposit(self, amount: float):
+        self.__balance += amount
+
+    def withdraw(self, amount: float):
+        self.__balance -= amount
+
+account_1 = Account(0, 1000)
+account_2 = Account(2, 2000)
+try:
+    account_1.id = ''
+except ValueError as ex:
+    print(ex)
+account_1.id = "1"
+print('Account 1: ', account_1.id, account_1.balance)
+print('Account 2: ', account_2.id, account_2.balance)
+account_1.deposit(500)
+print('Account 1: ', account_1.id, account_1.balance)
+account_1.withdraw(1000)
+print('Account 1: ', account_1.id, account_1.balance)
+```
+
+## Empty Class
+```
+class Customer:
+    pass
+
+customers = list()
+
+customer1 = Customer()
+customer1.FistName = 'Bob'
+customer1.LastName = 'Marley'
+customer1.Email = 'bob.marley@heaven.com'
+
+customer2 = Customer()
+customer2.FistName = 'Michael'
+customer2.LastName = 'Jackson'
+customer2.Email = 'michael.jackson@email.com'
+
+customer3 = Customer()
+customer3.FistName = 'Frank'
+customer3.LastName = 'Sinata'
+customer3.Email = 'frank.sinatra@email.com'
+
+customers.append(customer1)
+customers.append(customer2)
+customers.append(customer3)
+
+for c in customers:
+    print(f"Name: {c.FistName} {c.LastName}; Email: {c.Email}")
+```
