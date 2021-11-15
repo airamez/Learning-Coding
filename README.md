@@ -4,7 +4,7 @@ The idea is to introduce all the concepts using examples and allowing the partic
 
 I advice you to create an account at https://replit.com.
 
-Replit it a online(browser) IDE that allows you execute, debug and see the results of the programs.
+Replit is a online(browser) IDE that allows you execute, debug and see the results of the programs.
 
 Good luck and enjoy it!
 
@@ -144,7 +144,6 @@ len(string/collection)
 | or | Returns True if one of the statements is true |
 | not | Reverse the result: True if False and False if True |
 
-
 ## If statement
 ```
 if [logical_expression]:
@@ -171,6 +170,17 @@ if variable/expression is None:
 if variable/expression:
   # not None/Null
 ```
+
+# Instance of
+```
+is_instance(value, type)
+```
+| Code  | Result |
+|---|---|
+| ```isinstance(10, int)``` | True |
+| ```isinstance(3.14, float)``` | True |
+| ```isinstance('Jose', str)``` | True |
+| ```isinstance(False, bool)``` | True |
 
 ## For looping
 ```
