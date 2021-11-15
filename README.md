@@ -297,5 +297,33 @@ class ClassName:
   
 obj = ClassName(param1, param2)
 ```
+**Note:** Every method has to have the self parameter
 
 **Note:** It is strange if you comming from Java or C# but python automatically creates the attributes assigned inside the constructor
+
+## Class with encapsulation
+```
+class Account:
+    def __init__(self, id: str, balance: float):
+        self.__id = id  # private attribute
+        self.__balance = balance  # private attribute
+
+    def setId(self, id):
+        self.__id = id
+
+    def getId(self):
+        return self.__id
+
+    def getBalance(self):
+        return self.__balance
+
+    def deposit(self, amount: float):
+        self.__balance += amount
+
+    def withdraw(self, amount: float):
+        self.__balance -= amount
+
+    def __privateMethod():  # Private method
+        pass
+```
+**Note:** The double underscore makes a member private
