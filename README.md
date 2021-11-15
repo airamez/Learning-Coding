@@ -401,7 +401,7 @@ customer2.Email = 'michael.jackson@email.com'
 
 customer3 = Customer()
 customer3.FistName = 'Frank'
-customer3.LastName = 'Sinata'
+customer3.LastName = 'Sinatra'
 customer3.Email = 'frank.sinatra@email.com'
 
 customers.append(customer1)
