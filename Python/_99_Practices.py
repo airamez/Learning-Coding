@@ -208,3 +208,29 @@ def merge(self, intervals: List[List[int]]) -> List[List[int]]:
             else:
                 break
         return head
+
+# https://leetcode.com/problems/string-compression
+def compress(self, chars: List[str]) -> int:
+    if len(chars) == 1:
+        return 1
+    current_char = chars[0]
+    current_count = 1
+    output = []
+    for c in chars[1:]:
+        if c == current_char:
+            current_count += 1
+        else:
+            output.append([current_char, current_count])
+            current_char = c
+            current_count = 1
+    output.append([current_char, current_count])
+    i = 0
+    for entry in output:
+        chars[i] = entry[0]
+        i += 1
+        if entry[1] > 1:
+            count = str(entry[1])
+            for c in count:
+                chars[i] = c
+                i += 1
+    return i
