@@ -156,34 +156,26 @@ class Solution:
               return ''
       return prefix
 
-'''
-Given an arithmetic expression in Reverse Polish Notation, write a program to evaluate it.
-The expression is given as a list of numbers and operands. For example: [5, 3, '+'] should return 5 + 3 = 8.
-For example, [15, 7, 1, 1, '+', '-', '/', 3, '*', 2, 1, 1, '+', '+', '-'] should return 5, since it is equivalent to ((15 / (7 - (1 + 1))) * 3) - (2 + (1 + 1)) = 5.
-You can assume the given expression is always valid.
-'''
-def process (expression: list) -> float:
-  values = list()
-  for term in expression:
-    if isinstance(term, float) or isinstance(term, int):
-      values.append(term)
-    else:
-      newValue = None;
-      value_right = values.pop()
-      value_left = values.pop()
-      if term == '+':
-        newValue = value_left + value_right
-      elif term == '-':
-        newValue = value_left - value_right
-      elif term == '*':
-        newValue = value_left * value_right
-      else:
-        newValue = value_left / value_right
-      values.append(newValue)
-  return values[0]
-
-print(process([15, 7, 1, 1, '+', '-', '/', 3, '*', 2, 1, 1, '+', '+', '-']))
-print(process([5, 3, '+']))
+# https://leetcode.com/problems/evaluate-reverse-polish-notation/
+def evalRPN(self, tokens: List[str]) -> int:
+    values = list()
+    for token in tokens:
+        if token not in '+-*/':
+            values.append(int(token))
+        else:
+            new_value = None
+            right_value = values.pop()
+            left_value = values.pop()
+            if token == '+':
+                new_value = left_value + right_value
+            elif token == '-':
+                new_value =  left_value - right_value
+            elif token == '*':
+                new_value = left_value * right_value
+            else:
+                new_value = int(left_value / right_value)
+            values.append(new_value)
+    return values[0]
 
 # https://leetcode.com/problems/merge-intervals/submissions/
 def merge(self, intervals: List[List[int]]) -> List[List[int]]:
