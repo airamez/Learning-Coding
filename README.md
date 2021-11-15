@@ -1,5 +1,22 @@
 # Learning-Coding
-Introduction to computer programming using Python
+Introduction to computer programming using Python.
+The idea is to introduce all the concepts using examples and allowing the participant to run the code.
+
+I advice you to create an account at https://replit.com.
+
+Replit it a online(browser) IDE that allows you execute, debug and see the results of the programs.
+
+Good luck and enjoy it!
+
+## Course Material
+
+- Github: [https://github.com/airamez/Learning-Coding](https://github.com/airamez/Learning-Coding)
+- Replit: [https://replit.com/@airamez/Learning-Coding](https://replit.com/@airamez/Learning-Coding)
+
+## Contact
+- Email: airamez@gmail.com
+
+Critics, suggestions and recommendations are very welcome!
 
 ## Content
 | Description | File |
@@ -19,55 +36,55 @@ Introduction to computer programming using Python
 | If | [_11_if.py](Python/_11_if.py) | 
 | For | [_12_for.py](Python/_12_for.py) | 
 | While | [_13_while.py](Python/_13_while.py) | 
-| Break and Continue| [_14_break_continue.py](Python/_14_break_continue.py) | 
-| For and While Demo| [_15_for_while_demo.py](Python/_15_for_while_demo.py) | 
+| Break and Continue | [_14_break_continue.py](Python/_14_break_continue.py) | 
+| For and While Demo | [_15_for_while_demo.py](Python/_15_for_while_demo.py) | 
 | Practices | [_16_Practice.txt](Python/_16_Practice.txt) | 
-| Functions | [_17_Functions.py](Python/_17_Functions.py) | 
-| Functions | [_18_Functions.py](Python/_18_Functions.py) | 
-| Functions | [_19_Functions.py](Python/_19_Functions.py) | 
-| Functions | [_20_Functions.py](Python/_20_Functions.py) | 
-| Functions | [_21_Functions.py](Python/_21_Functions.py) | 
-| Modules | [_22_Modules.py](Python/_22_Modules.py) | 
-| Modules | [_23_Modules.py](Python/_23_Modules.py) | 
-| Modules | [_24_Modules.py](Python/_24_Modules.py) | 
-| Modules | [_25_Modules.py](Python/_25_Modules.py) | 
-| Exceptions | [_26_Exceptions.py](Python/_26_Exceptions.py) | 
-| Exceptions | [_27_Exceptions.py](Python/_27_Exceptions.py) | 
-| Exceptions | [_28_Exceptions.py](Python/_28_Exceptions.py) | 
-| Exceptions | [_29_Exceptions.py](Python/_29_Exceptions.py) | 
-| Unit testing | [_30_Unit_Testing.py](Python/_30_Unit_Testing.py) | 
-| Unit testing | [_31_Unit_Testing.py](Python/_31_Unit_Testing.py) | 
+| Functions 1 | [_17_Functions.py](Python/_17_Functions.py) | 
+| Functions 2 | [_18_Functions.py](Python/_18_Functions.py) | 
+| Functions 3 | [_19_Functions.py](Python/_19_Functions.py) | 
+| Functions 4 | [_20_Functions.py](Python/_20_Functions.py) | 
+| Functions 5 | [_21_Functions.py](Python/_21_Functions.py) | 
+| Modules 1 | [_22_Modules.py](Python/_22_Modules.py) | 
+| Modules 2 | [_23_Modules.py](Python/_23_Modules.py) | 
+| Modules 3 | [_24_Modules.py](Python/_24_Modules.py) | 
+| Modules 4 | [_25_Modules.py](Python/_25_Modules.py) | 
+| Exceptions 1 | [_26_Exceptions.py](Python/_26_Exceptions.py) | 
+| Exceptions 2 | [_27_Exceptions.py](Python/_27_Exceptions.py) | 
+| Exceptions 3 | [_28_Exceptions.py](Python/_28_Exceptions.py) | 
+| Exceptions 4 | [_29_Exceptions.py](Python/_29_Exceptions.py) | 
+| Unit testing 1 | [_30_Unit_Testing.py](Python/_30_Unit_Testing.py) | 
+| Unit testing 1 | [_31_Unit_Testing.py](Python/_31_Unit_Testing.py) | 
 | Collections | [_32_Collections.txt](Python/_32_Collections.txt) | 
-| List | [_33_Lists.py](Python/_33_Lists.py) | 
-| List | [_34_Lists.py](Python/_34_Lists.py) | 
-| List | [_35_Lists.py](Python/_35_Lists.py) | 
-| List | [_36_Lists.py](Python/_36_Lists.py) | 
-| Tuple | [_37_Tuple.py](Python/_37_Tuple.py) | 
-| Tuple | [_38_Tuple.py](Python/_38_Tuple.py) | 
-| Tuple | [_39_Tuple.py](Python/) | 
+| List 1 | [_33_Lists.py](Python/_33_Lists.py) | 
+| List 2 | [_34_Lists.py](Python/_34_Lists.py) | 
+| List 3 | [_35_Lists.py](Python/_35_Lists.py) | 
+| List 4 | [_36_Lists.py](Python/_36_Lists.py) | 
+| Tuple 1 | [_37_Tuple.py](Python/_37_Tuple.py) | 
+| Tuple 2 | [_38_Tuple.py](Python/_38_Tuple.py) | 
+| Tuple 3 | [_39_Tuple.py](Python/) | 
 | Set | [_40_Set.py](Python/_39_Tuple.py) | 
 | Dictionary | [_41_Dictionary.py](Python/_41_Dictionary.py) | 
-| Strings | [_42_Strings.py](Python/_42_Strings.py) | 
-| Strings | [_43_Strings.py](Python/_43_Strings.py) | 
-| Strings | [_44_Strings.py](Python/_44_Strings.py) | 
-| Strings | [_45_Strings.py](Python/_45_Strings.py) | 
+| More on Strings 1 | [_42_Strings.py](Python/_42_Strings.py) | 
+| More on Strings 2 | [_43_Strings.py](Python/_43_Strings.py) | 
+| More on Strings 3 | [_44_Strings.py](Python/_44_Strings.py) | 
+| More on Strings 4 | [_45_Strings.py](Python/_45_Strings.py) | 
 | Practices | [_46_Practices.txt](Python/_46_Practices.txt) | 
-| Math | [_47_Math.py](Python/_47_Math.py) | 
+| More on Math | [_47_Math.py](Python/_47_Math.py) | 
 | Build-in Functions | [_48_BuiltInFunctions.py](Python/_48_BuiltInFunctions.py) | 
-| Object Oriented Programming | [_49_OOP.py](Python/_49_OOP.py) | 
-| Object Oriented Programming | [_50_OOP.py](Python/_50_OOP.py) | 
-| Object Oriented Programming | [_51_OOP.py](Python/_51_OOP.py) | 
-| Object Oriented Programming | [_52_OOP.py](Python/_52_OOP.p) | 
-| Object Oriented Programming | [_53_OOP.py](Python/[_53_OOP.py) | 
-| Object Oriented Programming | [_54_OOP.py](Python/_54_OOP.py) | 
-| Object Oriented Programming | [_55_OOP.py](Python/_55_OOP.py) | 
-| Object Oriented Programming | [_56_OOP.py](Python/_56_OOP.py) | 
-| Collections | [_57_Collections.py](Python/_57_Collections.py) | 
-| Operational System Library | [_59_OS.py](Python/_59_OS.py) | 
-| Web Library | [_60_Web.py](Python/_60_Web.py) | 
-| Counter Collection | [_61_Counter.py](Python/_61_Counter.py) | 
-| Named Tuple Collections | [_62_NamedTuple.py](Python/_62_NamedTuple.py) | 
-| Ordered Dictionary Collection | [_63_OrderedDict.py](Python/_63_OrderedDict.py) | 
+| Object Oriented Programming 1 | [_49_OOP.py](Python/_49_OOP.py) | 
+| Object Oriented Programming 2 | [_50_OOP.py](Python/_50_OOP.py) | 
+| Object Oriented Programming 3 | [_51_OOP.py](Python/_51_OOP.py) | 
+| Object Oriented Programming 4 | [_52_OOP.py](Python/_52_OOP.p) | 
+| Object Oriented Programming 5 | [_53_OOP.py](Python/[_53_OOP.py) | 
+| Object Oriented Programming 6 | [_54_OOP.py](Python/_54_OOP.py) | 
+| Object Oriented Programming 7 | [_55_OOP.py](Python/_55_OOP.py) | 
+| Object Oriented Programming 8 | [_56_OOP.py](Python/_56_OOP.py) | 
+| More on Collections | [_57_Collections.py](Python/_57_Collections.py) | 
+| Operational System Library Demo | [_59_OS.py](Python/_59_OS.py) | 
+| Web Library Demo | [_60_Web.py](Python/_60_Web.py) | 
+| Counter Collection Demo | [_61_Counter.py](Python/_61_Counter.py) | 
+| Named Tuple Collections Demo| [_62_NamedTuple.py](Python/_62_NamedTuple.py) | 
+| Ordered Dictionary Collection Demo | [_63_OrderedDict.py](Python/_63_OrderedDict.py) | 
 | Practices | [_99_Practices.py](Python/_99_Practices.py) | 
 
 ## Cheatsheet
@@ -78,17 +95,55 @@ Introduction to computer programming using Python
 - bool
 - str
 
-## Integer division:
-| Description | Code |
-| --- | --- |
-| Div A per B | ```A // B``` |
-| Mod A per B | ```A % B``` |
-| Div and Mod of A per B | ```div, mod = divmod(A, B)```
+## Arithmetic operators
+| Operator | Description | Code |
+| --- | --- | --- |
+| + | Addition | ```a + b``` |
+| - | Subtraction | ```a - b``` |
+| * | Multiplication | ```a * b``` |
+| / | Division | ```a / b``` |
+| ** | Exponetiation | ```a ** b```|
+
+## Integer division
+| Operator/function | Description | Code |
+| --- | --- | --- |
+| // | Div or quocient | ```a // b``` |
+| % | Mod | ```a % b``` | 
+| divmod | Div and Mod of A per B | ```div, mod = divmod(A, B)```
+
+## Assignment operators
+| Operator | Description | Comments |
+| --- | --- | --- |
+| = | Direct assignment |  ```a = expression``` |
+| += | Addition assignment | ```a += i``` same as ```a = a + i``` |
+| -= | Subtract assignment | ```a -= i``` same as ```a = a - i``` |
+| *= | Multiply assignment | ```a *= i``` same as ```a = a * i``` |
+| -= | Division assignment | ```a /= i``` same as ```a = a / i``` |
+
+**WARNING:** Python does not have the ** and -- opertors
 
 ## Length of string or collection:
 ```
 len(string/collection)
 ```
+
+## Relational/Comparison operators
+| Operator | Description |
+| --- | --- |
+| == | Equal |
+| != | Not Equal / Different |
+| < | smaller than |
+| <= | smaller than or equal |
+| > | greater than |
+| >= | greater than or equal |
+
+## Logical operators
+| Operator | Description |
+| --- | --- |
+| and | Returns True if both statements are true |
+| or | Returns True if one of the statements is true |
+| not | Reverse the result: True if False and False if True |
+
 
 ## If statement
 ```
@@ -102,7 +157,7 @@ else:
   # statements
 
 ## Inline
-[result if true] if [logical_expression] else [result if false]
+result = [result if true] if [logical_expression] else [result if false]
 
 ```
 
@@ -111,7 +166,10 @@ else:
 ```
 ## Check null: 
 if variable/expression is None:
-  # statements
+  # It is None/Null
+
+if variable/expression:
+  # not None/Null
 ```
 
 ## For looping
@@ -129,8 +187,8 @@ while [logical_expression]:
 ```
 
 ## Break and Continue Looping
-- break
-- continue
+- break : breaks/ends a for or while loop
+- continue: skips the current iteraction of a for or while loop
 
 ## Functions
 ```
@@ -239,3 +297,5 @@ class ClassName:
   
 obj = ClassName(param1, param2)
 ```
+
+**Note:** It is strange if you comming from Java or C# but python automatically creates the attributes assigned inside the constructor

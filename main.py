@@ -1,1 +1,1 @@
-import Python._42_Strings
+import Python._00_HelloWorld
