@@ -251,6 +251,7 @@ raise Exception(exception_details)
 | Description  | Code |
 |---|---|
 | Constructor | ```set() or set(list)``` |
+| Add element | ```add(e)``` |
 | Union |``` set.union(a,b)``` |
 | Difference | ```set.difference(a,b)``` |
 | Intersection | ```set.intersection(a,b)``` |
@@ -271,6 +272,24 @@ raise Exception(exception_details)
 | Remove with default | ```dict.pop(key, [default]))``` |
 | Keys in inserted order | ```list(dictionary)``` |
 | Looping | ```for key, value in dictionary:``` |
+
+## Any Function
+Return true if any element of the list satisfy the logical expression
+```
+result = any(
+  logical_expression(e)
+  for e in list
+)
+```
+
+## All Function
+Return true if all elements of the list satisfy the logical expression
+```
+result = all(
+  logical_expression(e)
+  for e in list
+)
+```
 
 ## Map Function
 Applies a function to all elements in a list and returns a new list
