@@ -6,6 +6,8 @@ I advice you to create an account at https://replit.com.
 
 Replit is a online(browser) IDE that allows you execute, debug and see the results of the programs.
 
+A good approach is to copy and paste the snippets from this material/course into your replit repository and play by running, debugging and changing it.
+
 Good luck and enjoy it! :joy:
 
 ## Course Material
