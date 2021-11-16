@@ -162,8 +162,9 @@ result = [result if true] if [logical_expression] else [result if false]
 
 ```
 
-## Null value
-- None
+## None value
+- The None keyword is used to define a null value, or no value at all
+- None is a data type of its own (NoneType)
 ```
 ## Check null: 
 if variable/expression is None:
@@ -188,6 +189,7 @@ is_instance(value, type)
 ```
   for i in range(0, len(collection)):
     # statements
+
   for item in collection
     # statements
 ```
@@ -197,6 +199,8 @@ is_instance(value, type)
 while [logical_expression]:
   # statements
 ```
+
+**WARNING:** Python does not have do-while command
 
 ## Break and Continue Looping
 - break : breaks/ends a for or while loop
@@ -238,12 +242,13 @@ raise Exception(exception_details)
 | Add a list | ```listA + listB or listA.extend(listB) ```|
 | Add element | ```append(e)``` |
 | Remove first ocurrence | ```remove(e)``` |
-| Remove last | ```pop()``` |
-| Remove by range | ```del list[start[:end]]``` |
-| Remove at and return | ```pop(i)``` |
-| Sort | ```list.sort()``` |
-| Sort with lambda | ```list.sort(key = lambda e: e.field)``` |
-| Sort to new | ```sorted()``` |
+| Remove last and return | ```last = my_list.pop()``` |
+| Remove at index and return | ```ele = pop(i)``` |
+| Remove at index or by range | ```del my_list[i]``` ```del my_list[start[:end]]``` |
+| Sort | ```sort()``` |
+| Sort with lambda | ```sort(key = lambda e: e.field)``` |
+| Sort to new | ```newSortedList = my_list.sorted()``` |
+| Sort to new with lambda | ```sortedList = my_list.sorted(key = lambda e: e.field)``` |
 | Insert at | ```insert(i, e)``` |
 | Find index | ```index(e, [start, end])``` |
 | Count elements | ```count(e)``` |
@@ -254,6 +259,7 @@ raise Exception(exception_details)
 |---|---|
 | Constructor | ```set() or set(list)``` |
 | Add element | ```add(e)``` |
+| Remove element | ```remove(e)``` throws KeyError if e doesn't exist |
 | Union |``` set.union(a,b)``` |
 | Difference | ```set.difference(a,b)``` |
 | Intersection | ```set.intersection(a,b)``` |
