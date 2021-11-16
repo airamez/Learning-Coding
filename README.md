@@ -120,7 +120,7 @@ Critics, suggestions and recommendations are very welcome!
 | *= | Multiply assignment | ```a *= i``` same as ```a = a * i``` |
 | -= | Division assignment | ```a /= i``` same as ```a = a / i``` |
 
-**WARNING:** Python does not have the ** and -- opertors
+**WARNING:** Python does not have the ++ and -- opertors
 
 ## Length of string or collection:
 ```
