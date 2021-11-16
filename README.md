@@ -217,7 +217,7 @@ def function_name (param1: type, param2: type) -> return_type:
   # Function Body
   return [return value]
 
-# Using the pass keyword to define for a function without body
+# Using the pass keyword to define a function without body
 def function_name (param1, param2, param3):
   pass # Create a placeholder for future code
 
@@ -227,9 +227,9 @@ def function_name (param1, param2, param3):
 ```python
 try:
   # statements
-except ExceptionTypeA as exA:
+except ExceptionTypeA as ex_a:
   # statements
-except ExceptionTypeB as exB:
+except ExceptionTypeB as ex_b:
   # statements
 else: # only excecuted if no exceptions
   # statements
@@ -244,7 +244,8 @@ raise Exception(exception_details)
 | Description  | Code |
 |---|---|
 | Constructor |```[] or list()``` |
-| Add a list | ```listA + listB or listA.extend(listB) ```|
+| Add a list | ```list_a.extend(list_b) ```|
+| Adding two lists | ```list_c = list_a + list_b``` |
 | Add element | ```append(e)``` |
 | Remove first ocurrence | ```remove(e)``` |
 | Remove last and return | ```last = my_list.pop()``` |
@@ -252,8 +253,8 @@ raise Exception(exception_details)
 | Remove at index or by range | ```del my_list[i]``` ```del my_list[start[:end]]``` |
 | Sort | ```sort()``` |
 | Sort with lambda | ```sort(key = lambda e: e.field)``` |
-| Sort to new | ```newSortedList = my_list.sorted()``` |
-| Sort to new with lambda | ```sortedList = my_list.sorted(key = lambda e: e.field)``` |
+| Sort to a new list | ```newSortedList = my_list.sorted()``` |
+| Sort to new a list with lambda | ```sortedList = my_list.sorted(key = lambda e: e.field)``` |
 | Insert at | ```insert(i, e)``` |
 | Find index | ```index(e, [start, end])``` |
 | Count elements | ```count(e)``` |
