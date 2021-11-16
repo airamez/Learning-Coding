@@ -234,3 +234,43 @@ def compress(self, chars: List[str]) -> int:
                 chars[i] = c
                 i += 1
     return i
+
+# https://leetcode.com/problems/binary-tree-inorder-traversal
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    inOrder = []
+    self.__inorderTraversal(root, inOrder)
+    return inOrder
+def __inorderTraversal (self, node: Optional[TreeNode], inOrder: list[TreeNode]):
+    if node:
+        self.__inorderTraversal(node.left, inOrder)
+        inOrder.append(node.val)
+        self.__inorderTraversal(node.right, inOrder)
+
+# https://leetcode.com/problems/longest-substring-without-repeating-characters
+def lengthOfLongestSubstring(self, s: str) -> int:
+    if s == None or len(s) == 0:
+        return 0
+    if len(s) == 1:
+        return 1
+    left = 0
+    right = 1
+    my_set = set()
+    my_set.add(s[0])
+    max_len = 1
+    while (right < len(s)):
+        if right < len(s) and s[right] not in my_set:
+            my_set.add(s[right])
+            right += 1
+            max_len = max(max_len, len(my_set))
+        else:
+            while s[left] != s[right]:
+                my_set.remove(s[left])
+                left += 1
+            left += 1
+            right += 1
+    return max_len
