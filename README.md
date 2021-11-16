@@ -6,7 +6,7 @@ I advice you to create an account at https://replit.com.
 
 Replit is a online(browser) IDE that allows you execute, debug and see the results of the programs.
 
-Good luck and enjoy it!
+Good luck and enjoy it! :joy:
 
 ## Course Material
 
@@ -98,7 +98,7 @@ Critics, suggestions and recommendations are very welcome!
 ## Arithmetic operators
 | Operator | Description | Code |
 | --- | --- | --- |
-| + | Addition | ```a + b``` |
+| + | Addition | ``` a + b``` |
 | - | Subtraction | ```a - b``` |
 | * | Multiplication | ```a * b``` |
 | / | Division | ```a / b``` |
