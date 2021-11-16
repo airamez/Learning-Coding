@@ -272,14 +272,14 @@ raise Exception(exception_details)
 | Keys| ```keys()``` |
 | Check if key exists | ```k in dict.keys()``` |
 | Values | ```values()``` |
-| Access | ```dict[key]``` |
-| Access with default| ```dict.get(key, [default])``` |
+| Access | ```dict[key]``` throws KeyError if key doesn't exist |
+| Access with default| ```dict.get(key, default)``` returns default if key doesn not exist |
 | Check | ```key_value in dict.keys()``` |
-| Delete| ```del dict[key]```
-| Remove| ```dict.pop(key)``` |
-| Remove with default | ```dict.pop(key, [default]))``` |
-| Keys in inserted order | ```list(dictionary)``` |
-| Looping | ```for key, value in dictionary:``` |
+| Delete| ```del dict[key]``` |
+| Remove| ```dict.pop(key)``` throws KeyError if key doesn't exist |
+| Remove with default | ```dict.pop(key, default)) ``` returns default if key doesn not exist |
+| Keys sorted by inserted order | ```list(dictionary)``` |
+| Looping with key and corresponding value | ```for key, value in dictionary:``` |
 
 ## Any Function
 Return true if any element of the list satisfy the logical expression
@@ -302,13 +302,13 @@ result = all(
 ## Map Function
 Applies a function to all elements in a list and returns a new list
 ```
-result = list(map(lambda e: function(e), input_list))
+new_list = list(map(lambda e: function(e), input_list))
 ```
 
 ## Filter Function
 Creates a list of elements for which a function returns true
 ```
-result = list(filter(lambda e: expression(e), input_list))
+new_list = list(filter(lambda e: expression(e), input_list))
 ```
 
 ## Zip Function
@@ -318,6 +318,11 @@ names = ['Jose', 'Leila', 'Artur']
 ages = [49, 44, 19]
 for name, age in zip(names, ages):
   print(name, 'is', age, 'years old')
+
+Output:
+Jose is 49 years old
+Leila is 44 years old
+Artur is 19 years old
 ```
 
 ## Class
