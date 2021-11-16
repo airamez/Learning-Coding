@@ -227,9 +227,9 @@ def function_name (param1, param2, param3):
 ```python
 try:
   # statements
-except [ExceptionType]:
+except ExceptionTypeA as exA:
   # statements
-except [ExceptionType]:
+except ExceptionTypeB as exB:
   # statements
 else: # only excecuted if no exceptions
   # statements

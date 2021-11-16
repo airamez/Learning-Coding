@@ -25,6 +25,15 @@ prime_numbers.add(3)
 print(f'Set size: {len(prime_numbers)}')
 print("Prime Number =", prime_numbers)
 
+print('Removing 17')
+prime_numbers.remove(17)
+print("Prime Number =", prime_numbers)
+
+try :
+  prime_numbers.remove(17)
+except KeyError as ex:
+  print(type(ex), ex)
+
 # Creating a set of random values
 set_a = set()
 for i in range(0, 10):

@@ -82,22 +82,10 @@
     ],
     "Python/_40_Set.py": [
       {
-        "id": "32b50b0b-4584-4c99-875e-c14176aca898",
-        "line": 4,
-        "version": 172,
-        "index": 33
-      },
-      {
-        "id": "4df912c6-4685-443e-8038-eb90cb062416",
-        "line": 35,
-        "version": 172,
-        "index": 828
-      },
-      {
-        "id": "27281152-bfd3-43b3-a3aa-c0ae33244a45",
-        "line": 41,
-        "version": 172,
-        "index": 934
+        "id": "fbcfa026-a3e7-439d-a5ea-26e3a9223f22",
+        "line": 33,
+        "version": 277,
+        "index": 754
       }
     ],
     "Python/_41_Dictionary.py": [
