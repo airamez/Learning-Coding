@@ -147,7 +147,7 @@ len(string/collection)
 **WARNING:** Python does not have logical operators like C languages: && ||
 
 ## If statement
-```
+```python
 if [logical_expression]:
   # statements
 elif [logical_expression]:
@@ -159,13 +159,12 @@ else:
 
 ## Inline
 result = [result if true] if [logical_expression] else [result if false]
-
 ```
 
 ## None value
 - The None keyword is used to define a null value, or no value at all
 - None is a data type of its own (NoneType)
-```
+```python
 ## Check null: 
 if variable/expression is None:
   # It is None/Null
@@ -175,7 +174,7 @@ if variable/expression:
 ```
 
 # Instance of
-```
+```python
 is_instance(value, type)
 ```
 | Code  | Result |
@@ -186,7 +185,7 @@ is_instance(value, type)
 | ```isinstance(False, bool)``` | True |
 
 ## For looping
-```
+```python
   for i in range(0, len(collection)):
     # statements
 
@@ -195,7 +194,7 @@ is_instance(value, type)
 ```
 
 ## While looping
-```
+```python
 while [logical_expression]:
   # statements
 ```
@@ -207,8 +206,8 @@ while [logical_expression]:
 - continue: skips the current iteraction of a for or while loop
 
 ## Functions
-```
-def function_name (params list):
+```python
+def function_name (param1, param2, param3):
   # Function Body
   return [return value]
 
@@ -216,10 +215,14 @@ def function_name (param1: type, param2: type) -> return_type:
   # Function Body
   return [return value]
 
+# Using the pass keyword to define for a function without body
+def function_name (param1, param2, param3):
+  pass # Create a placeholder for future code
+
 ```
 
 ## Exceptions
-```
+```python
 try:
   # statements
 except [ExceptionType]:
@@ -283,7 +286,7 @@ raise Exception(exception_details)
 
 ## Any Function
 Return true if any element of the list satisfy the logical expression
-```
+```python
 result = any(
   logical_expression(e)
   for e in list
@@ -292,7 +295,7 @@ result = any(
 
 ## All Function
 Return true if all elements of the list satisfy the logical expression
-```
+```python
 result = all(
   logical_expression(e)
   for e in list
@@ -301,24 +304,25 @@ result = all(
 
 ## Map Function
 Applies a function to all elements in a list and returns a new list
-```
+```python
 new_list = list(map(lambda e: function(e), input_list))
 ```
 
 ## Filter Function
 Creates a list of elements for which a function returns true
-```
+```python
 new_list = list(filter(lambda e: expression(e), input_list))
 ```
 
 ## Zip Function
 The zip(lists) function returns a zip object, which is an iterator of tuples where the first item in each passed iterator is paired together, and then the second item in each passed iterator are paired together etc.
-```
+```python
 names = ['Jose', 'Leila', 'Artur']
 ages = [49, 44, 19]
 for name, age in zip(names, ages):
   print(name, 'is', age, 'years old')
-
+```
+```
 Output:
 Jose is 49 years old
 Leila is 44 years old
@@ -326,7 +330,7 @@ Artur is 19 years old
 ```
 
 ## Class
-```
+```python
 class ClassName:
   # Constructor
   def __init__ (self, param1, param2):
@@ -344,7 +348,7 @@ obj = ClassName(param1, param2)
 **Note:** It is strange if you comming from Java or C# but python automatically creates the attributes assigned inside the constructor
 
 ## Class with encapsulation using setters and getters
-```
+```python
 class Account:
     def __init__(self, id: str, balance: float):
         self.__id = id  # private attribute
@@ -371,7 +375,7 @@ class Account:
 **Note:** The double underscore makes a member private
 
 ## Class with encapsulation using Properties
-```
+```python
 class Account:
     '''Class representing a Bank Account'''
     def __init__(self, id: str, balance: float):
@@ -415,7 +419,7 @@ print('Account 1: ', account_1.id, account_1.balance)
 ```
 
 ## Empty Class
-```
+```python
 class Customer:
     pass
 
