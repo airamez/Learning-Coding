@@ -144,6 +144,8 @@ len(string/collection)
 | or | Returns True if one of the statements is true |
 | not | Reverse the result: True if False and False if True |
 
+**WARNING:** Python does not have logical operators like C languages: && ||
+
 ## If statement
 ```
 if [logical_expression]:
