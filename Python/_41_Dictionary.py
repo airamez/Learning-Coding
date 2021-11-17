@@ -105,3 +105,7 @@ if "BR" not in countries:
 print('\n#14 Cleaning a dict')
 countries.clear()
 print("Countries =", countries)
+
+print('\n#15 Looping a dictionary acessing key, value and items()')
+for key, value in months.items():
+  print(key, value)

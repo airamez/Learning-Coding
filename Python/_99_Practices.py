@@ -320,3 +320,25 @@ def missingNumber(self, nums: List[int]) -> int:
     for num in range(_min, _max + 1):
         total_sum += num
     return total_sum - _sum if total_sum - _sum > 0 else _max + 1
+
+# https://leetcode.com/problems/binary-tree-level-order-traversal
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+def _levelOrder(self, node: Optional[TreeNode], _dict, level):
+    if node:
+        if level not in _dict.keys():
+            _dict[level] = list()
+        _dict[level].append(node.val)
+        self._levelOrder(node.left, _dict, level + 1)
+        self._levelOrder(node.right, _dict, level + 1)
+
+def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    _dict = dict()
+    self._levelOrder(root, _dict, 0)
+    result = list()
+    for level, nodes in _dict.items():
+        result.append(nodes)
+    return result
