@@ -342,3 +342,63 @@ def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
     for level, nodes in _dict.items():
         result.append(nodes)
     return result
+
+# https://leetcode.com/problems/trapping-rain-water
+def trap(self, height: List[int]) -> int:
+    max_left = 0
+    max_right = 0
+    max_list = list()
+    for i in range(len(height)):
+        max_list.append([max_left,0])
+        max_list[i][0] = max_left
+        max_left = max(max_left, height[i])
+    for i in range(len(height) - 1, -1, -1):
+        max_list[i][1] = max_right
+        max_right = max(max_right, height[i])
+    total_water = 0
+    for i in range(len(height) - 1, -1, -1):
+        boundaries = min(max_list[i][0], max_list[i][1])
+        if boundaries > height[i]:
+            total_water += boundaries - height[i]
+    return total_water
+
+# https://leetcode.com/problems/game-of-life
+def get_status(self, board: List[List[int]], i, j) -> int:
+  ''''
+    Dead  = 0
+    Alive = 1
+    Death to Alive = 2
+    Alive to Death = 3
+  '''
+  alive_count = 0
+  for _i in range(i - 1, i + 2):
+      for _j in range(j - 1, j + 2):
+        if _i >= 0 and _i < len(board) and \
+            _j >= 0 and _j < len(board[_i]):
+          if _i == i and _j == j:
+            continue;
+          if board[_i][_j] in [1,3]:
+            alive_count += 1
+  if board[i][j] in [1,3]:
+      if alive_count < 2:
+          return 3
+      elif alive_count <= 3:
+          return 1
+      else:
+          return 3
+  if board[i][j] in [0,2]:
+      if alive_count == 3:
+          return 2
+      else:
+          return 0
+
+def gameOfLife(self, board: List[List[int]]) -> None:
+  for i in range(len(board)):
+      for j in range(len(board[i])):
+          board[i][j] = self.get_status(board, i, j)
+  for i in range(len(board)):
+      for j in range(len(board[i])):
+        if board[i][j] == 2:
+          board[i][j] = 1
+        if board[i][j] == 3:
+          board[i][j] = 0
