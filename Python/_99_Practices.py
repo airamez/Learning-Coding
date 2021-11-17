@@ -282,6 +282,9 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
     for i in range(len(nums) - 2):
         if (nums[i]) > 0:
             break
+        # Skip duplicated
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue
         left = i + 1
         right = len(nums) - 1
         while left < right:
