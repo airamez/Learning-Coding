@@ -299,3 +299,24 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
             else:
                 right -= 1
     return list(triplets)
+
+# https://leetcode.com/problems/missing-number/
+def missingNumber(self, nums: List[int]) -> int:
+    if len(nums) == 1:
+        if nums[0] != 0:
+            return nums[0] - 1
+        else:
+            return nums[0] + 1
+    _min = nums[0]
+    _max = nums[0]
+    _sum = 0
+    for num in nums:
+        _min = min(_min, num)
+        _max = max(_max, num)
+        _sum += num
+    if _min == 1:
+        return 0
+    total_sum = 0
+    for num in range(_min, _max + 1):
+        total_sum += num
+    return total_sum - _sum if total_sum - _sum > 0 else _max + 1
