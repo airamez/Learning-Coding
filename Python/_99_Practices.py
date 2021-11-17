@@ -274,3 +274,25 @@ def lengthOfLongestSubstring(self, s: str) -> int:
             left += 1
             right += 1
     return max_len
+
+# https://leetcode.com/problems/3sum
+def threeSum(self, nums: List[int]) -> List[List[int]]:
+    nums.sort()
+    triplets = set()
+    for i in range(len(nums) - 2):
+        if (nums[i]) > 0:
+            break
+        left = i + 1
+        right = len(nums) - 1
+        while left < right:
+            value = nums[i] + nums[left] + nums[right]
+            if value == 0:
+                entry = tuple([nums[i], nums[left], nums[right]])
+                triplets.add(entry)
+                left += 1
+                right -= 1
+            elif value < 0:
+                left += 1
+            else:
+                right -= 1
+    return list(triplets)
