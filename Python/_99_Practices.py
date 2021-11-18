@@ -404,7 +404,8 @@ def gameOfLife(self, board: List[List[int]]) -> None:
           board[i][j] = 0
 
 # https://leetcode.com/problems/4sum
-def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+# Solution 1
+def fourSum1(self, nums: List[int], target: int) -> List[List[int]]:
     result = set()
     nums.sort()
     for i in range(0, len(nums) - 3):
@@ -432,3 +433,69 @@ def binary_search (self, nums: List[int], target: int, index: int) -> int:
         else:
             left = mid + 1
     return -1
+# Solution 2
+def fourSum2(self, nums: List[int], target: int) -> List[List[int]]:
+    result = set()
+    nums.sort()
+    for i in range(0, len(nums) - 3):
+        for j in range(i + 1, len(nums) - 2):
+            ij_sum = nums[i] + nums[j]
+            left = j + 1
+            right = len(nums) - 1
+            while left < right:
+                left_right_sum = nums[left] + nums[right]
+                if ij_sum + left_right_sum == target:
+                    entry = tuple([nums[i], nums[j], nums[left], nums[right]])
+                    result.add(entry)
+                    left += 1
+                elif ij_sum + left_right_sum > target:
+                    right -= 1
+                else:
+                    left += 1
+    final_result = list()
+    for e in result:
+          final_result.append(list(e))
+    return final_result
+
+# https://leetcode.com/problems/same-tree
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+def add_to_queue(self, queue: List[TreeNode], tree: Optional[TreeNode]) -> None:
+    if tree != None:
+        queue.append(tree)
+
+def is_equal(self, tree1: Optional[TreeNode], tree2: Optional[TreeNode]) -> bool:
+    if tree1.left is None and tree2.left is not None:
+        return False
+    if tree1.left is not None and tree2.left is None:
+        return False
+    if tree1.right is None and tree2.right is not None:
+        return False
+    if tree1.right is not None and tree2.right is None:
+        return False
+    return tree1.val == tree2.val
+
+def isSameTree(self, tree1: Optional[TreeNode], tree2: Optional[TreeNode]) -> bool:
+    if tree1 == None and tree2 == None:
+        return True
+    if (tree1 == None and tree2 != None) or \
+        (tree1 != None and tree2 == None):
+        return False
+    queue1 = list()
+    queue2 = list()
+    queue1.append(tree1)
+    queue2.append(tree2)
+    while len(queue1) > 0 and len(queue2) > 0:
+        node1 = queue1.pop(0)
+        node2 = queue2.pop(0)
+        if not self.is_equal(node1, node2):
+            return False
+        self.add_to_queue(queue1, node1.left)
+        self.add_to_queue(queue1, node1.right)
+        self.add_to_queue(queue2, node2.left)
+        self.add_to_queue(queue2, node2.right)
+    return True
