@@ -499,3 +499,34 @@ def isSameTree(self, tree1: Optional[TreeNode], tree2: Optional[TreeNode]) -> bo
         self.add_to_queue(queue2, node2.left)
         self.add_to_queue(queue2, node2.right)
     return True
+
+# https://leetcode.com/problems/merge-k-sorted-lists
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+    comp = list()
+    for l in lists:
+        if l:
+            comp.append(l)
+    head = None
+    tail = None
+    while len(comp) > 0:
+        smaller = comp[0].val
+        smaller_index = 0
+        for i in range(len(comp)):
+            if comp[i].val < smaller:
+                smaller = comp[i].val
+                smaller_index = i
+        if head == None:
+            head = ListNode(smaller)
+            tail = head
+        else:
+            tail.next = ListNode(smaller)
+            tail = tail.next
+        comp[smaller_index] = comp[smaller_index].next
+        if comp[smaller_index] == None:
+            del comp[smaller_index]
+    return head
