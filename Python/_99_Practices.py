@@ -402,3 +402,33 @@ def gameOfLife(self, board: List[List[int]]) -> None:
           board[i][j] = 1
         if board[i][j] == 3:
           board[i][j] = 0
+
+# https://leetcode.com/problems/4sum
+def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+    result = set()
+    nums.sort()
+    for i in range(0, len(nums) - 3):
+        for j in range(i + 1, len(nums) - 2):
+            for k in range(j + 1, len(nums) - 1):
+                my_target = target - (nums[i] + nums[j] + nums[k])
+                index = self.binary_search(nums, my_target, k + 1)
+                if index != -1:
+                    entry = tuple([nums[i], nums[j], nums[k], nums[index]])
+                    result.add(entry)
+    final_result = list()
+    for e in result:
+        final_result.append(list(e))
+    return final_result
+
+def binary_search (self, nums: List[int], target: int, index: int) -> int:
+    left = index
+    right = len(nums) - 1
+    while (left <= right):
+        mid = left + ((right - left) // 2)
+        if nums[mid] == target:
+            return mid
+        elif nums[mid] > target:
+            right = mid - 1
+        else:
+            left = mid + 1
+    return -1
