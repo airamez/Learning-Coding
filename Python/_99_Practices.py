@@ -530,3 +530,38 @@ def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         if comp[smaller_index] == None:
             del comp[smaller_index]
     return head
+
+'''
+Given A and B two interval lists sorted by start time, A has no overlap inside A and B has no overlap inside B. Write the function to merge two interval lists, output the result with no overlap.
+Example,
+A: [1,5], [10,14], [16,18]
+B: [2,6], [8,10], [11,20]
+output [1,6], [8, 20]
+'''
+def _merge(current_interval: list, result: list) -> None:
+    if current_interval[0] <= result[-1][1]:
+        result[-1][1] = max(current_interval[1], result[-1][1])
+    else:
+      result.append([current_interval[0], current_interval[1]])
+
+def merge_intervals(intervals1: list, intervals2: list) -> list:
+    i1 = 0
+    i2 = 0
+    result = list()
+    while i1 < len(intervals1) and i2 < len(intervals2):
+        current_interval = None
+        if intervals1[i1][0] < intervals2[i2][0]:
+            current_interval = intervals1[i1]
+            i1 += 1
+        else:
+            current_interval = intervals2[i2]
+            i2 += 1
+        if len(result) == 0:
+            result.append([current_interval[0], current_interval[1]])
+        else:
+            _merge(current_interval, result)
+    for i in range(i1, len(intervals1)):
+        _merge(intervals1[i], result)
+    for i in range(i2, len(intervals2)):
+        _merge(intervals2[i], result)
+    return result
