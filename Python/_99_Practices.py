@@ -588,3 +588,16 @@ class Solution:
                 return
         self.current = node.val
         self.inOrder(node.right)
+
+# https://leetcode.com/problems/move-zeroes
+def moveZeroes(self, nums: List[int]) -> None:
+    left = 0
+    while left < len(nums) and nums[left] != 0:
+        left += 1
+    right = left + 1
+    while right < len(nums):
+        if right < len(nums) and nums[right] != 0:
+            nums[left] = nums[right]
+            nums[right] = 0
+            left += 1
+        right += 1
