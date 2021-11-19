@@ -565,3 +565,26 @@ def merge_intervals(intervals1: list, intervals2: list) -> list:
     for i in range(i2, len(intervals2)):
         _merge(intervals2[i], result)
     return result
+
+# https://leetcode.com/problems/validate-binary-search-tree
+class Solution:
+    current = None
+    isBST = True
+
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        self.isBST = True
+        self.inOrder(root)
+        return self.isBST
+    
+    def inOrder(self, node: Optional[TreeNode]) -> None:
+        if node is None or not self.isBST:
+            return
+        self.inOrder(node.left)
+        if self.current is None:
+            self.current = node.val
+        else:
+            if node.val <= self.current:
+                self.isBST = False
+                return
+        self.current = node.val
+        self.inOrder(node.right)
