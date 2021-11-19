@@ -177,7 +177,7 @@ def evalRPN(self, tokens: List[str]) -> int:
             values.append(new_value)
     return values[0]
 
-# https://leetcode.com/problems/merge-intervals/submissions/
+# https://leetcode.com/problems/merge-intervals/
 def merge(self, intervals: List[List[int]]) -> List[List[int]]:
     if not intervals or len(intervals) == 1:
         return intervals
@@ -192,7 +192,7 @@ def merge(self, intervals: List[List[int]]) -> List[List[int]]:
             result.append([start, end])
     return result
 
-# https://leetcode.com/problems/swap-nodes-in-pairs/submissions/
+# https://leetcode.com/problems/swap-nodes-in-pairs/
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if (not head) or (not head.next):
             return head
