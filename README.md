@@ -129,6 +129,19 @@ Critics, suggestions and recommendations are very welcome!
 len(string/collection)
 ```
 
+## Formating String
+```
+name = 'Jose Santos'
+age = 49
+salary = 175000.493456799676
+formatted_string = f'name: {name}; age: {age}, salary: {salary: ,.2f}'
+print(formatted_string)
+```
+```
+Output:
+name: Jose Santos; age: 49, salary:  175,000.49
+```
+
 ## Relational/Comparison operators
 | Operator | Description |
 | --- | --- |

@@ -15,6 +15,13 @@ n3 = 3
 avg = (n1 + n2 + n3) / 3
 print(f"The Average of {n1}, {n2} and {n3} is {avg}")
 
+# Interpolation with formating
+name = 'Jose Santos'
+age = 49
+salary = 175000.49345
+formated_string = f'name: {name}; age: {age}, salary: {salary: ,.2f}'
+print(formated_string)
+
 # Length
 print('len(full_name):', len(full_name))
 
