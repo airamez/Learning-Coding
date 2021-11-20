@@ -601,3 +601,13 @@ def moveZeroes(self, nums: List[int]) -> None:
             nums[right] = 0
             left += 1
         right += 1
+
+# https://leetcode.com/problems/single-number
+def singleNumber(self, nums: List[int]) -> int:
+    mySet = set()
+    for n in nums:
+        if n not in mySet:
+            mySet.add(n)
+        else:
+            mySet.remove(n)
+    return list(mySet)[0]
