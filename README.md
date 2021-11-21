@@ -182,11 +182,12 @@ result = [result if true] if [logical_expression] else [result if false]
 ```python
 ## Check null: 
 if variable/expression is None:
-  # It is None/Null
+  # variable/expression is None
 
-if variable/expression:
-  # not None/Null
+if variable/expression is not None:
+  # variable/expression is not None
 ```
+**WARNING:** Never compare to None with the == operator. Always use 'is' or 'is not'
 
 # Instance of
 ```python
@@ -213,7 +214,6 @@ is_instance(value, type)
 while [logical_expression]:
   # statements
 ```
-
 **WARNING:** Python does not have do-while command
 
 ## Break and Continue Looping
@@ -253,8 +253,56 @@ finally: # always executed
 raise Exception(exception_details)
 ```
 
+## Date and DateTime
+```python
+# date
+today = date.today()
+print(today.year, today.month, today.day)
+
+# datetime
+now = datetime.now()
+print(now.hour, now.minute, now.second)
+
+# Fomating
+print(now.strftime('%A, %B, %Y'))
+print(now.strftime('%Y%m%d'))
+print(now.strftime('%Y/%m/%d'))
+print(now.strftime('%Y-%m-%d %H:%M:%S.%f'))
+
+# Parsing string to datetime
+date_str = '25/03/1972 14:00'
+my_birth = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
+```
+### Data/Time formating directives
+| Directive | Meaning |
+| --- | --- |
+| %a	| Weekday as locale’s abbreviated name. |
+| %A	| Weekday as locale’s full name. |
+| %w	| Weekday as a decimal number, where 0 is Sunday and 6 is Saturday. |
+| %d	| Day of the month as a zero-padded decimal number. |
+| %b	| Month as locale’s abbreviated name. |
+| %B	| Month as locale’s full name. |
+| %m	| Month as a zero-padded decimal number. |
+| %y	| Year without century as a zero-padded decimal number. |
+| %Y	| Year with century as a decimal number. |
+| %H	| Hour (24-hour clock) as a zero-padded decimal number. |
+| %I	| Hour (12-hour clock) as a zero-padded decimal number. |
+| %p	| Locale’s equivalent of either AM or PM. |
+| %M	| Minute as a zero-padded decimal number. |
+| %S	| Second as a zero-padded decimal number. |
+| %f	| Microsecond as a decimal number, zero-padded on the left. |
+| %z	| UTC offset in the form ±HHMM[SS[.ffffff]] (empty string if the object is naive). |
+| %Z	| Time zone name (empty string if the object is naive). |
+| %j	| Day of the year as a zero-padded decimal number. |
+| %U	| Week number of the year (Sunday as the first day of the week) as a zero padded decimal number. |
+| %W	| Week number of the year (Monday as the first day of the week) as a decimal number. |
+| %c	| Locale’s appropriate date and time representation.  |
+| %x	| Locale’s appropriate date representation. |
+| %X	| Locale’s appropriate time representation. |
+| %%	| A literal '%' character. |
+
 ## List
-| Description  | Code |
+| Description | Code |
 |---|---|
 | Constructor |```[] or list()``` |
 | Add a list | ```list_a.extend(list_b) ```|

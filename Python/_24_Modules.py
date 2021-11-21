@@ -1,7 +1,7 @@
 """
 It is possible to import specific functions directly from a module
 """
-from _22_Modules_01 import add_bonus, increase_salary
+from _22_Modules import add_bonus, increase_salary
 
 current_salary = 100000
 
