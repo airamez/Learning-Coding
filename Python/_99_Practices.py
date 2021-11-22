@@ -611,3 +611,36 @@ def singleNumber(self, nums: List[int]) -> int:
         else:
             mySet.remove(n)
     return list(mySet)[0]
+
+# https://leetcode.com/problems/roman-to-integer
+def romanToInt(self, s: str) -> int:
+    table = dict()
+    table['I']  = 1
+    table['IV'] = 4
+    table['V']  = 5
+    table['IX'] = 9
+    table['X']  = 10
+    table['XL'] = 40
+    table['L']  = 50
+    table['XC'] = 90
+    table['C']  = 100
+    table['CD'] = 400
+    table['D']  = 500
+    table['CM'] = 900
+    table['M']  = 1000
+    result = 0
+    i = 0
+    while i < len(s):
+        term = None
+        if i < len(s) - 1:
+            twoDigits = s[i: i+2]
+            if twoDigits in table.keys():
+                term = table[twoDigits]
+                i += 1
+            else:
+                term = table[s[i]]
+        else:
+            term = table[s[i]]
+        result += term
+        i += 1
+    return result
