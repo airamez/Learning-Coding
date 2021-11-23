@@ -644,3 +644,37 @@ def romanToInt(self, s: str) -> int:
         result += term
         i += 1
     return result
+
+
+# https://leetcode.com/problems/rotate-list/
+def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+    if head == None:
+        return None
+    count = 0
+    right = head
+    left = None
+    count = 1
+    listLen = self.listLen(head)
+    if listLen == 1 or k == 0 or listLen == k or k % listLen == 0:
+        return head
+    k = k %  listLen
+    while right.next != None:
+        if left is not None:
+            left = left.next
+        if count == k:
+            left = head
+        right = right.next
+        count += 1
+    newHead = left.next
+    right.next = head
+    left.next = None
+    return newHead
+
+def listLen(self, head: Optional[ListNode]) -> int:
+    runner = head
+    count = 0
+    while (runner is not None):
+        count += 1
+        runner = runner.next
+    return count
+  
