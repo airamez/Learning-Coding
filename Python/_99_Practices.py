@@ -678,3 +678,43 @@ def listLen(self, head: Optional[ListNode]) -> int:
         runner = runner.next
     return count
   
+# https://leetcode.com/problems/copy-list-with-random-pointer
+class Node:
+    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
+        self.val = int(x)
+        self.next = next
+        self.random = random
+
+def copyRandomList(self, head: 'Node') -> 'Node':
+    if not head:
+        return None
+    mapping = dict()
+    runner = head
+    while runner:
+        mapping[runner] = Node(runner.val)
+        runner = runner.next
+    runner = head
+    while runner:
+        if runner.next:
+            mapping[runner].next = mapping[runner.next]
+        if runner.random:
+            mapping[runner].random = mapping[runner.random]
+        runner = runner.next
+    return mapping[head]
+
+# https://leetcode.com/problems/valid-palindrome
+def isPalindrome(self, s: str) -> bool:
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if not (s[left].isalpha()) and not s[left].isnumeric():
+            left += 1
+            continue
+        if (not s[right].isalpha()) and not s[right].isnumeric():
+            right -= 1
+            continue
+        if s[left].lower() != s[right].lower():
+            return False
+        left += 1
+        right -= 1
+    return True
