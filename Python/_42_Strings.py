@@ -13,3 +13,13 @@ for i in range(0, len(s)):
 print()
 for i in range(371, 400):
     print(f"{i} = {chr(i)}")
+
+import string
+
+# Constants
+print(string.ascii_letters)
+print(string.ascii_lowercase)
+print(string.ascii_uppercase)
+print(string.digits)
+print(string.hexdigits)
+print(string.whitespace)

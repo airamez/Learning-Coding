@@ -30,7 +30,7 @@ for c in first_name:
 for i in range(0, len(first_name)):
     print(f"first_name[{i}] = {first_name[i]}")
 
-print("\n#4 Is Alpha (Alphabetic)")
+print("\n#4 Is Alphabetic")
 print("abcd".isalpha())
 print("abcd.".isalpha())
 print("abcd123".isalpha())
@@ -43,7 +43,13 @@ print(" 123 ".isnumeric())
 print(" ".isnumeric())
 print("".isnumeric())
 
-print("\n#6 Is Space")
+print("\n#6 Is AlphaNumeric")
+print("123".isalnum())
+print("12334abc".isalnum())
+print(" 123 ".isalnum())
+print("$123 ".isalnum())
+
+print("\n#7 Is Space")
 print(" ".isspace())
 print("       ".isspace())
 print("  coding    ".isspace())

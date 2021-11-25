@@ -3,6 +3,12 @@ phrase = "I Love Computer Programming"
 print("#0 Split")
 words = phrase.split()
 print(words)
+words = "I_Love_Computer_Programming"
+words = words.split('_')
+print(words)
+words = "I<->Love<->Computer<->Programming"
+words = words.split('<->')
+print(words)
 
 
 print("\n#1 Substring/Slicing")
@@ -91,11 +97,7 @@ print(s.zfill(10))
 s = "-7.45"
 print(s.zfill(10))
 
-print("\n#15 swapcase")
-word = 'AbCdEfGhI'
-print(word, word.swapcase())
-
-print("\n#16 Join")
+print("\n#15 Join")
 namesList = list()
 namesList.append('Jose')
 namesList.append('Leila')
@@ -104,7 +106,7 @@ namesStr = ','.join(namesList)
 print(namesList)
 print(namesStr)
 
-print("\n#17 Sorting")
+print("\n#16 Sorting")
 s = "lpoimjknbgtrsfdvcxaz"
 print(type(s), s)
 s = sorted(s)
