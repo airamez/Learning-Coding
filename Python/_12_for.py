@@ -47,4 +47,18 @@ for i in range(start, end + 1):
 '''
 Practices:
 1 - Read two integer numbers representing an interval and print all numbers in the interval
+2 - Print the first 50 terms of Fibonacci series
 '''
+
+'''
+The Fibonacci series is calculated using two initial terms: 0 and 1 and each new term is
+the addition of the two previous ones.
+'''
+term_left = 0
+term_right = 1
+print(term_left, term_right, end=' ') # Printing the first two terms
+for i in range(0, 50):                # Looping 50 times
+  new_term = term_left + term_right   # Calculate the new term
+  print(new_term, end=' ')            # Printing the new term
+  term_left = term_right              # Updating the term_left with the term_right value
+  term_right = new_term               # Updating the term_right with the new_term value
