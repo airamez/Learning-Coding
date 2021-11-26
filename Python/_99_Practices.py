@@ -721,9 +721,11 @@ def isPalindrome(self, s: str) -> bool:
 
 # https://leetcode.com/problems/rotate-image
 def rotate(self, matrix: List[List[int]]) -> None:
+    # Rotate matrix using the principal diagonal as pivot
     for i in range(len(matrix)):
         for j in range(i + 1, len(matrix)):
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+    # Reverse each line
     for i in range(len(matrix)):
         left = 0
         right = len(matrix) - 1
