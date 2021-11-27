@@ -733,3 +733,27 @@ def rotate(self, matrix: List[List[int]]) -> None:
             matrix[i][left], matrix[i][right] = matrix[i][right], matrix[i][left]
             left += 1
             right -= 1
+
+# https://leetcode.com/problems/symmetric-tree
+class Solution:
+    
+    __isSymmetric = True
+    
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        self.__isSymmetric = True
+        if root:
+            self.__check(root.left, root.right)
+        return self.__isSymmetric
+
+    def __check(self, left: Optional[TreeNode], right: Optional[TreeNode]) -> None:
+        if not self.__isSymmetric:
+            return
+        if left is None and right is None:
+            return
+        elif left is None or right is None:
+            self.__isSymmetric = False
+        elif left.val != right.val:
+            self.__isSymmetric = False
+        else:
+            self.__check(left.left, right.right)
+            self.__check(left.right, right.left)

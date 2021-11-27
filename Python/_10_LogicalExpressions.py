@@ -17,12 +17,15 @@
 n1 = 5
 n2 = 3
 n3 = 2
-print(f"{n1} == 5 = {n1 == 5}")
-print(f"{n1} >= {n2} + 3 = {n1 >= n2 + 3}")
-print(f"{n1} > {n2} and {n1} > {n3} = {n1 > n2 and n1 > n3}")
-print(f"{n2} > {n1} or {n2} > {n3} = {n2 > n1 or n2 > n3}")
+print(f"{n1} == 5: {n1 == 5}")
+print(f"{n1} >= {n2} + 3: {n1 >= n2 + 3}")
+print(f"{n1} > {n2} and {n1} > {n3}: {n1 > n2 and n1 > n3}")
+print(f"{n2} > {n1} or {n2} > {n3}: {n2 > n1 or n2 > n3}")
+
+print(f"n3 < n2 < n1 = {n3 < n2 < n1}")
 
 print("True = ", True)
 print("False = ", False)
 print("not True = ", not True)
 print("not False = ", not False)
+
