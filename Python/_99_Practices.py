@@ -766,3 +766,45 @@ def maxDepth(self, root: Optional[TreeNode]) -> int:
         left_depth = self.maxDepth(root.left)
         right_depth = self.maxDepth(root.right)
         return 1 + max(left_depth, right_depth)
+
+# https://leetcode.com/problems/rotting-oranges/
+def restoreValues(self, grid: List[List[int]]) -> None:
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if grid[i][j] == 3:
+                grid[i][j] = 2
+
+def rottenAround(self, grid: List[List[int]], i: int, j: int) -> bool:
+    if i > 0 and grid[i - 1][j] == 2:
+        return True
+    if i < len(grid) - 1 and grid[i + 1][j] == 2:
+        return True
+    if j > 0 and grid[i][j - 1] == 2:
+            return True
+    if j < len(grid[i]) - 1 and grid[i][j + 1] == 2:
+            return True
+    return False
+
+def allRotten(self, grid: List[List[int]]) -> bool:
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if grid[i][j] == 1:
+                return False
+    return True
+
+def orangesRotting(self, grid: List[List[int]]) -> int:
+    activity = True
+    count = 0
+    while activity:
+        activity = False
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j] == 1 and self.rottenAround(grid, i, j):
+                    grid[i][j] = 3
+                    activity = True
+        self.restoreValues(grid)
+        count += 1
+    if self.allRotten(grid):
+        return count - 1
+    else:
+        return -1
