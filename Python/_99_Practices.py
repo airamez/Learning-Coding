@@ -768,6 +768,8 @@ def maxDepth(self, root: Optional[TreeNode]) -> int:
         return 1 + max(left_depth, right_depth)
 
 # https://leetcode.com/problems/rotting-oranges/
+
+# Solution one
 def restoreValues(self, grid: List[List[int]]) -> None:
     for i in range(len(grid)):
         for j in range(len(grid[i])):
@@ -808,3 +810,57 @@ def orangesRotting(self, grid: List[List[int]]) -> int:
         return count - 1
     else:
         return -1
+
+# Solution 2
+class Solution:
+    
+    FRESH = 1
+    ROTTEN = 2
+    
+    def processCell(self, grid: List[List[int]], cell: list, nextQueue: list) -> None:
+        i = cell[0]
+        j = cell[1]
+        if i > 0 and grid[i-1][j] == self.FRESH:
+            grid[i-1][j] = self.ROTTEN
+            nextQueue.insert(0, [i-1, j])
+        if i < len(grid) - 1 and grid[i+1][j] == self.FRESH:
+            grid[i+1][j] = self.ROTTEN
+            nextQueue.insert(0, [i+1,j])
+        if j > 0 and grid[i][j-1] == 1:
+            grid[i][j-1] = self.ROTTEN
+            nextQueue.insert(0, [i, j-1])
+        if j < len(grid[i]) - 1 and grid[i][j+1] == self.FRESH:
+            grid[i][j+1] = self.ROTTEN
+            nextQueue.insert(0, [i, j+1])
+    
+    def hasStatus(self, grid: List[List[int]], status: int) -> bool:
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j] == status:
+                    return True
+        return False
+    
+    def orangesRotting(self, grid: List[List[int]]) -> int:
+        if not self.hasStatus(grid, self.ROTTEN):
+            if self.hasStatus(grid, self.FRESH):
+                return -1
+            else:
+                return 0
+        currentQueue = list()
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j] == self.ROTTEN:
+                    currentQueue.append([i, j])
+        response = 0
+        nextQueue = list()
+        while len(currentQueue) > 0:
+            currentCell = currentQueue.pop()
+            self.processCell(grid, currentCell, nextQueue)
+            if len(currentQueue) == 0:
+                response += 1
+                currentQueue = nextQueue
+                nextQueue = list()
+        if self.hasStatus(grid, self.FRESH):
+            return -1
+        else:
+            return response - 1
