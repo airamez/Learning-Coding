@@ -867,33 +867,16 @@ class Solution:
 
 # https://leetcode.com/problems/squares-of-a-sorted-array
 def sortedSquares(self, nums: List[int]) -> List[int]:
-    left = -1
-    for i in range(len(nums) - 1):
-        if nums[i] < 0 and nums[i + 1] >= 0:
-            left = i
-            break
-    if left == -1:
-        if (nums[0] < 0):
-            nums.reverse()
-        for i in range(len(nums)):
-            nums[i] *= nums[i]
-        return nums
-    right = left + 1
-    sortedList = list()
-    while left >= 0 and right < len(nums):
+    left = 0
+    right = len(nums) - 1
+    result = deque()
+    while left <= right:
         leftSquare = nums[left] ** 2
         rightSquare = nums[right] ** 2
-        if leftSquare < rightSquare:
-            sortedList.append(leftSquare)
-            left -= 1
+        if leftSquare > rightSquare:
+            result.insert(0, leftSquare)
+            left += 1
         else:
-            sortedList.append(rightSquare)
-            right += 1
-    print(left, right)
-    while left >= 0:
-        sortedList.append(nums[left] ** 2)
-        left -= 1
-    while right < len(nums):
-        sortedList.append(nums[right] ** 2)
-        right += 1
-    return sortedList
+            result.insert(0,rightSquare)
+            right -= 1
+    return result
