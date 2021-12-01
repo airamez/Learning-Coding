@@ -879,3 +879,34 @@ def sortedSquares(self, nums: List[int]) -> List[int]:
             result.insert(0,rightSquare)
             right -= 1
     return result
+
+# https://leetcode.com/problems/merge-k-sorted-lists
+import heapq
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        heap = []
+        heapq.heapify(heap)
+        for i in range(len(lists)):
+            if lists[i]:
+                heapq.heappush(heap, [lists[i].val, i])
+        head = None
+        tail = None
+        while len(heap) > 0:
+            node = heapq.heappop(heap)
+            val = node[0]
+            list_index = node[1]
+            if not head:
+                head = ListNode(val)
+                tail = head
+            else:
+                tail.next = ListNode(val)
+                tail = tail.next
+            if lists[list_index].next:
+                lists[list_index] = lists[list_index].next
+                heapq.heappush(heap, [lists[list_index].val, list_index])
+        return head
