@@ -345,21 +345,20 @@ def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
 
 # https://leetcode.com/problems/trapping-rain-water
 def trap(self, height: List[int]) -> int:
+    limits = list()
     max_left = 0
-    max_right = 0
-    max_list = list()
     for i in range(len(height)):
-        max_list.append([max_left,0])
-        max_list[i][0] = max_left
+        limits.append([max_left, 0])
         max_left = max(max_left, height[i])
+    max_right = 0
     for i in range(len(height) - 1, -1, -1):
-        max_list[i][1] = max_right
+        limits[i][1] = max_right
         max_right = max(max_right, height[i])
     total_water = 0
-    for i in range(len(height) - 1, -1, -1):
-        boundaries = min(max_list[i][0], max_list[i][1])
-        if boundaries > height[i]:
-            total_water += boundaries - height[i]
+    for i in range(len(height)):
+        limit = min(limits[i][0], limits[i][1])
+        if limit > height[i]:
+            total_water += limit - height[i]
     return total_water
 
 # https://leetcode.com/problems/game-of-life
