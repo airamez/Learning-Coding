@@ -910,3 +910,67 @@ class Solution:
                 lists[list_index] = lists[list_index].next
                 heapq.heappush(heap, [lists[list_index].val, list_index])
         return head
+
+# https://leetcode.com/problems/word-search
+'''
+Using DFS
+'''
+class Solution:
+    
+    __found = False
+    
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        self.__found = False
+        for i in range(len(board)):
+          for j in range(len(board[i])):
+            if board[i][j] == word[0] and not self.__found:
+              self.dsf(board, word, i, j, 0)
+        return self.__found
+                
+    def dsf(self, board: List[List[str]], word: str, i: int, j: int, index: int) -> None:
+      if self.__found:
+        return
+      if index >= len(word):
+        self.__found = True
+        return
+      if i < 0 or i >= len(board) or j < 0 or j >= len(board[i]):
+        return
+      if word[index] == board[i][j]:
+        char = board[i][j]
+        board[i][j] = '#'
+        self.dsf(board, word, i - 1, j, index + 1)
+        self.dsf(board, word, i + 1, j, index + 1)
+        self.dsf(board, word, i, j - 1, index + 1)
+        self.dsf(board, word, i, j + 1, index + 1)
+        board[i][j] = char
+
+'''
+Using BFS
+'''
+class Solution:
+    
+    __found = False
+    
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        __found = False
+        for i in range(len(board)):
+            for j in range(len(board[i])):
+                if board[i][j].lower() == word[0].lower():
+                    self.bsf(board, word, i, j, 0, set())
+        return self.__found
+    
+    def bsf (self, board: List[List[str]], word: str, i: int, j: int, index: int, visited: set) -> None:
+        if self.__found or index >= len(word) or i < 0 or i >= len(board) or j < 0 or j >= len(board[i]):
+            return
+        if tuple([i,j]) in visited:
+            return
+        if board[i][j].lower() == word[index].lower():
+            if index >= len(word) - 1:
+                self.__found = True
+                return
+            else:
+                visited.add(tuple([i,j]))
+                self.bsf(board, word, i - 1, j, index + 1, set(visited)) 
+                self.bsf(board, word, i + 1, j, index + 1, set(visited))
+                self.bsf(board, word, i , j - 1, index + 1, set(visited))
+                self.bsf(board, word, i, j + 1, index + 1, set(visited))
