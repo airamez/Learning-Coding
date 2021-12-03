@@ -974,3 +974,27 @@ class Solution:
                 self.bsf(board, word, i + 1, j, index + 1, set(visited))
                 self.bsf(board, word, i , j - 1, index + 1, set(visited))
                 self.bsf(board, word, i, j + 1, index + 1, set(visited))
+
+# https://leetcode.com/problems/lru-cache
+def __init__(self, capacity: int):
+    self.__capacity = capacity
+    self.__cache = dict()
+    self.__accessOrder = list()
+
+def get(self, key: int) -> int:
+    if key not in self.__cache.keys():
+        return -1
+    else:
+        value = self.__cache[key]
+        self.__cache.pop(key)
+        self.__cache[key] = value
+        return value
+
+def put(self, key: int, value: int) -> None:
+    if key in self.__cache.keys():
+        self.__cache.pop(key)
+    self.__cache[key] = value
+    if len(self.__cache.keys()) > self.__capacity:
+        keyToRemove = next(iter(self.__cache.keys()))
+        if keyToRemove != key:
+            self.__cache.pop(keyToRemove)

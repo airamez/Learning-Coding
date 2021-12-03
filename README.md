@@ -253,6 +253,17 @@ finally: # always executed
 raise Exception(exception_details)
 ```
 
+## Time
+
+```python
+import time
+
+start = time.time()
+# execution
+end = time.time()
+duration = end - start
+```
+
 ## Date and DateTime
 ```python
 # date
@@ -273,6 +284,7 @@ print(now.strftime('%Y-%m-%d %H:%M:%S.%f'))
 date_str = '25/03/1972 14:00'
 my_birth = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
 ```
+
 ### Data/Time formating directives
 | Directive | Meaning |
 | --- | --- |
@@ -374,7 +386,7 @@ my_birth = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
 | Check if element exists | ```element in set``` |
 
 ## Dictionary
-| Description | Code
+| Description | Code |
 |---|---|
 | Constructor | ```dict()``` |
 | Keys| ```keys()``` |
@@ -388,6 +400,10 @@ my_birth = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
 | Remove with default | ```dict.pop(key, default)) ``` returns default if key doesn not exist |
 | Keys sorted by inserted order | ```list(dictionary)``` |
 | Looping with key and corresponding value | ```for key, value in dictionary:``` |
+
+## Heap
+| Description | Code |
+| | | 
 
 ## Any Function
 Return true if any element of the list satisfy the logical expression
