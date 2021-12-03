@@ -979,7 +979,6 @@ class Solution:
 def __init__(self, capacity: int):
     self.__capacity = capacity
     self.__cache = dict()
-    self.__accessOrder = list()
 
 def get(self, key: int) -> int:
     if key not in self.__cache.keys():
