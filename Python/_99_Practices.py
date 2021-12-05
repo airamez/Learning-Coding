@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Set
 
 # https://leetcode.com/problems/first-bad-version/
 def isBadVersion(version):
@@ -997,3 +997,59 @@ def put(self, key: int, value: int) -> None:
         keyToRemove = next(iter(self.__cache.keys()))
         if keyToRemove != key:
             self.__cache.pop(keyToRemove)
+
+# https://leetcode.com/problems/count-binary-substrings
+def buildSummary(self, s: str) -> list:
+    summary = list()
+    current = s[0]
+    count = 0
+    for c in s:
+        if c == current:
+            count += 1
+        else:
+            summary.append((current, count))
+            current = c
+            count = 1
+    summary.append((current, count))
+    return summary
+
+def countBinarySubstrings(self, s: str) -> int:
+    if not s or len(s) == 0:
+        return 0
+    count = 0
+    summary = self.buildSummary(s)
+    for i in range(len(summary) - 1) :
+        count += min(summary[i][1], summary[i+1][1])
+    return count
+
+# https://leetcode.com/problems/concatenated-words
+def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
+    wordsSet = set(words)
+    result = set()
+    history = dict()
+    for word in words:
+        for i in range(1, len(word)):
+            prefix = word[0:i]
+            sufix = word[i:]
+            if prefix in wordsSet:
+                if self.checkSufix(sufix, wordsSet, history):
+                    result.add(word)
+    return list(result)
+    
+def checkSufix(self, word: str, words: Set[str], history: dict) -> bool:
+    if word in history.keys():
+        return history[word]
+    if word in words:
+        return True
+        history[word] = True
+    else:
+        for i in range(1, len(word)):
+            prefix = word[0:i]
+            sufix = word[i:]
+            if prefix in words:
+                result = self.checkSufix(sufix, words, history)
+                if result:
+                    history[word] = True
+                    return True
+    history[word] = False
+    return False
