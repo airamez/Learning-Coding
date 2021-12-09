@@ -82,11 +82,15 @@ Critics, suggestions and recommendations are very welcome!
 | Object Oriented Programming 7 | [_55_OOP.py](Python/_55_OOP.py) | 
 | Object Oriented Programming 8 | [_56_OOP.py](Python/_56_OOP.py) | 
 | More on Collections | [_57_Collections.py](Python/_57_Collections.py) | 
-| Operational System Library Demo | [_59_OS.py](Python/_59_OS.py) | 
-| Web Library Demo | [_60_Web.py](Python/_60_Web.py) | 
-| Counter Collection Demo | [_61_Counter.py](Python/_61_Counter.py) | 
-| Named Tuple Collections Demo| [_62_NamedTuple.py](Python/_62_NamedTuple.py) | 
-| Ordered Dictionary Collection Demo | [_63_OrderedDict.py](Python/_63_OrderedDict.py) | 
+| Operational System Library | [_59_OS.py](Python/_59_OS.py) | 
+| Web Library | [_60_Web.py](Python/_60_Web.py) | 
+| Counter Collection | [_61_Counter.py](Python/_61_Counter.py) | 
+| Named Tuple Collections | [_62_NamedTuple.py](Python/_62_NamedTuple.py) | 
+| Ordered Dictionary Collection | [_63_OrderedDict.py](Python/_63_OrderedDict.py) | 
+| DateTime | [_64_DateTime.py](Python/_64_DateTime.py) | 
+| Deck | [_65_Deck.py](Python/_65_Deck.py) | 
+| Heap | [_66_Heap.py](Python/_66_Heap.py) | 
+
 | Practices | [_99_Practices.py](Python/_99_Practices.py) | 
 
 ## Cheatsheet
@@ -401,9 +405,27 @@ my_birth = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
 | Keys sorted by inserted order | ```list(dictionary)``` |
 | Looping with key and corresponding value | ```for key, value in dictionary:``` |
 
+## Deck
+| Description | Code |
+|---|---|
+| ``` ```| |
+| ``` ```| |
+| ``` ```| |
+| ``` ```| |
+| ``` ```| |
+| ``` ```| |
+| ``` ```| |
+| ``` ```| |
+
 ## Heap
 | Description | Code |
-| | | 
+|---|---|
+| ```import heapq```| import the heap library |
+| ```heapq.heapify(heap_list)```| Initialize a list as a Min Heap |
+| ```heapq.heappush(heap_list, val)```| Push an element into the Heap |
+| ```heapq.heappop(heap_list)```| Pop the minimum element from the Heap |
+| ```heapq.nlargest(n, heap_list)```| Returns (does not remove) the n largest elements in the Heap |
+| ```heapq.nsmallest(n, heap_list)```| Returns (does not remove) the n smallest elements in the Heap |
 
 ## Any Function
 Return true if any element of the list satisfy the logical expression
