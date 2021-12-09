@@ -1053,3 +1053,235 @@ def checkSufix(self, word: str, words: Set[str], history: dict) -> bool:
                     return True
     history[word] = False
     return False
+
+# https://leetcode.com/problems/top-k-frequent-words
+def topKFrequent(self, words: List[str], k: int) -> List[str]:
+    summary = dict()
+    for word in words:
+        if word not in summary:
+            summary[word] = 0
+        summary[word] += 1
+    summaryByCount = dict()
+    for word, count in summary.items():
+        if count not in summaryByCount:
+            summaryByCount[count] = list()
+        summaryByCount[count].append(word)
+    kCounts = list(summaryByCount.keys())
+    kCounts.sort(reverse=True)
+    kCounts = kCounts[:k]
+    result = list()
+    wordsCount = 0
+    for count in kCounts:
+        wordsToAdd = summaryByCount[count]
+        wordsToAdd.sort()
+        word_index = 0
+        while wordsCount < k and word_index < len(wordsToAdd):
+            result.append(wordsToAdd[word_index])
+            wordsCount += 1
+            word_index += 1
+    return result
+
+# https://leetcode.com/problems/third-maximum-number/
+import heapq
+
+class Solution:
+    def thirdMax(self, nums: List[int]) -> int:
+        heap = list()
+        heapq.heapify(heap)
+        for num in nums:
+            if num not in heap:
+                heapq.heappush(heap, num)
+                if len(heap) > 3:
+                    heapq.heappop(heap)
+        if len(heap) == 2:
+            heapq.heappop(heap)
+        return heapq.heappop(heap)
+
+# https://leetcode.com/problems/course-schedule/
+def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+    summary = dict()
+    for course in range(numCourses):
+        summary[course] = set()
+    for pre in prerequisites:
+        course = pre[0]
+        req = pre[1]
+        summary[course].add(req)
+    refCountDic = dict()
+    checking = None
+    for key, values in summary.items():
+        refCountDic[key] = len(values)
+        if refCountDic[key] == 0:
+            checking = key
+    while checking is not None:
+        for course in summary.keys():
+            if checking in summary[course]:
+              refCountDic[course] -= 1
+        refCountDic.pop(checking)
+        checking = None
+        for course, dep_len in refCountDic.items():
+            if dep_len == 0:
+                checking = course
+                break
+    
+    return len(refCountDic) == 0
+
+# https://leetcode.com/problems/course-schedule-ii/
+def __init__(self):
+    self.cycle = None
+    self.visited = None
+    self.processing = None
+
+def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+    self.cycle = False
+    self.visited = set()
+    self.processing = set()
+    graph = dict()
+    for course in range(numCourses):
+        graph[course] = list()
+    for course, pre_req in prerequisites:
+        graph[course].append(pre_req)
+    result = list()
+    for course in graph.keys():
+        self.dfs(graph, course, result)
+    if self.cycle:
+        result = []
+    return result
+
+def dfs(self, graph: dict, course: int, result: list) -> None:
+    if self.cycle or course in self.visited:
+        return
+    if course in self.processing:
+        self.cycle = True
+        return
+    self.processing.add(course)
+    for pre_req in graph[course]:
+        self.dfs(graph, pre_req, result)
+    result.append(course)
+    self.visited.add(course)
+    self.processing.remove(course)
+
+# https://leetcode.com/problems/binary-tree-right-side-view/
+def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+    _dict = dict()
+    self.visit(root, _dict, 0)
+    return list(_dict.values())
+    
+def visit(self, node: Optional[TreeNode], _dict: dict, level: int) -> None:
+    if node:
+        _dict[level] = node.val
+        self.visit(node.left, _dict, level + 1)
+        self.visit(node.right, _dict, level + 1)
+
+# https://leetcode.com/problems/find-pivot-index/
+def pivotIndex(self, nums: List[int]) -> int:
+    sums = list()
+    _sum = 0
+    for i in range(len(nums)):
+        sums.append([_sum, 0])
+        _sum += nums[i]
+    _sum = 0
+    for i in range(len(nums) -1, -1, -1):
+        sums[i][1] = _sum
+        _sum += nums[i]
+    if sums[0][1] == 0:
+        return 0
+    for i in range(len(sums)):
+        if sums[i][0] == sums[i][1]:
+            return i
+    if sums[len(sums) - 1][0] == 0:
+        return len(sums) - 1
+    return -1
+
+# https://leetcode.com/problems/verifying-an-alien-dictionary/
+def isAlienSorted(self, words: List[str], order: str) -> bool:
+    lettersOrder = self.buildOrderDict(order)
+    for i in range(len(words) - 1):
+        if not self.inOrder(words[i], words[i+1], lettersOrder):
+            return False
+    return True
+
+def buildOrderDict(self, order: str) -> dict:
+    lettersOrder = dict()
+    for i in range(len(order)):
+        lettersOrder[order[i]] = i
+    return lettersOrder
+
+def inOrder(self, leftWord: str, rightWord: str, lettersOrder: dict) -> bool:
+    i = 0
+    while i < len(leftWord) and i < len(rightWord):
+        if lettersOrder[leftWord[i]] > lettersOrder[rightWord[i]]:
+            return False
+        elif lettersOrder[leftWord[i]] < lettersOrder[rightWord[i]]:
+            return True
+        i += 1
+    if len(leftWord) > len(rightWord):
+        return False
+    return True
+
+# https://leetcode.com/problems/top-k-frequent-elements/
+def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+    numCountDict = dict()
+    for n in nums:
+        if n not in numCountDict:
+            numCountDict[n] = 0
+        numCountDict[n] += 1
+    topKCounts = list(numCountDict.values())
+    topKCounts.sort(reverse=True)
+    topKCounts = topKCounts[0:k]
+    response = set()
+    for c in topKCounts:
+        for num, count in numCountDict.items():
+            if c == count:
+                response.add(num)
+    return list(response)
+
+# https://leetcode.com/problems/number-of-islands/
+class Solution:
+    LAND = '1'
+    WATER = '0'
+    
+    def numIslands(self, grid: List[List[str]]) -> int:
+        islandsCount = 0
+        visitedIslands = set()
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if (i,j) not in visitedIslands and grid[i][j] == self.LAND:
+                    islandsCount += 1
+                    print(islandsCount)
+                    self.update(grid, i, j, visitedIslands)
+        return islandsCount            
+    
+    def update(self, grid: List[List[str]], i: int, j: int, visitedIslands: set) -> None:
+        if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[i]) or \
+           grid[i][j] == self.WATER or (i,j) in visitedIslands:
+            return
+        else:
+            visitedIslands.add((i,j))
+            self.update(grid, i - 1, j, visitedIslands)
+            self.update(grid, i + 1, j, visitedIslands)
+            self.update(grid, i, j - 1, visitedIslands)
+            self.update(grid, i, j + 1, visitedIslands)
+
+# https://leetcode.com/problems/lru-cache/
+def __init__(self, capacity: int):
+    self.__capacity = capacity
+    self.__cache = dict()
+    self.__accessOrder = list()
+
+def get(self, key: int) -> int:
+    if key not in self.__cache.keys():
+        return -1
+    else:
+        value = self.__cache[key]
+        self.__cache.pop(key)
+        self.__cache[key] = value
+        return value
+
+def put(self, key: int, value: int) -> None:
+    if key in self.__cache.keys():
+        self.__cache.pop(key)
+    self.__cache[key] = value
+    if len(self.__cache.keys()) > self.__capacity:
+        keyToRemove = next(iter(self.__cache.keys()))
+        if keyToRemove != key:
+            self.__cache.pop(keyToRemove)     
