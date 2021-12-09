@@ -408,14 +408,13 @@ my_birth = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
 ## Deck
 | Description | Code |
 |---|---|
-| ``` ```| |
-| ``` ```| |
-| ``` ```| |
-| ``` ```| |
-| ``` ```| |
-| ``` ```| |
-| ``` ```| |
-| ``` ```| |
+| ```from collections import deque```| Imports the deque collection |
+| ```deque()```| Constructor |
+| ```append(element)```| Add to the right (End/Tail) |
+| ```appendleft(element)```| Add to the left (Start/Head) |
+| ```insert(1, element)```| Inserts at specific position|
+| ```popleft()```| Removes and returns from the left (Start/Head) |
+| ```pop()```| Removes and returns from the right (End/Tail) |
 
 ## Heap
 | Description | Code |
