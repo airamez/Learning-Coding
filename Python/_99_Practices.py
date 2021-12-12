@@ -1333,8 +1333,7 @@ def put(self, key: int, value: int) -> None:
     self.__cache[key] = value
     if len(self.__cache.keys()) > self.__capacity:
         keyToRemove = next(iter(self.__cache.keys()))
-        if keyToRemove != key:
-            self.__cache.pop(keyToRemove)
+        self.__cache.pop(keyToRemove)
 
 # 221. Maximal Square
 # https://leetcode.com/problems/maximal-square
@@ -1379,3 +1378,44 @@ def maximalSquare(self, matrix: List[List[str]]) -> int:
         current_i -= 1
         current_j -= 1
     return max_len ** 2
+
+# 1041. Robot Bounded In Circle
+# https://leetcode.com/problems/robot-bounded-in-circle/
+def isRobotBounded(self, instructions: str) -> bool:
+    pos = [0,0,'N']
+    
+    for i in range(4):
+        self.process(instructions, pos)
+        if pos[0] == 0 and pos[1] == 0:
+            return True
+    return False
+
+def process(self, instructions: str, pos: list) -> None:
+    for i in instructions:
+        if i == 'G':
+            if pos[2] == 'N':
+                pos[0] += 1
+            elif pos[2] == "S":
+                pos[0] -= 1
+            elif pos[2] == 'W':
+                pos[1] -= 1
+            else:
+                pos[1] += 1
+        elif i == 'L':
+            if pos[2] == 'N':
+                pos[2] = 'W'
+            elif pos[2] == 'W':
+                pos[2] = 'S'
+            elif pos[2] == 'S':
+                pos[2] = 'E'
+            else:
+                pos[2] = 'N'
+        else:
+            if pos[2] == 'N':
+                pos[2] = 'E'
+            elif pos[2] == 'E':
+                pos[2] = 'S'
+            elif pos[2] == 'S':
+                pos[2] = 'W'
+            else:
+                pos[2] = 'N'
