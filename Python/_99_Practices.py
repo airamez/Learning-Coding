@@ -1,6 +1,8 @@
 from typing import List, Optional, Set
 
+# 278. First Bad Version
 # https://leetcode.com/problems/first-bad-version/
+
 def isBadVersion(version):
   pass
 
@@ -17,6 +19,7 @@ def firstBadVersion(self, n):
         else:
             left = mid + 1
 
+# 217. Contains Duplicate
 # https://leetcode.com/problems/contains-duplicate/
 def containsDuplicate(self, nums: List[int]) -> bool:
     s = set()
@@ -26,6 +29,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
         s.add(nums[i])
     return False
 
+# 704. Binary Search
 # https://leetcode.com/problems/binary-search/
 def search(self, nums: List[int], target: int) -> int:
     left = 0
@@ -41,6 +45,7 @@ def search(self, nums: List[int], target: int) -> int:
         if left > right:
             return -1
 
+# 11. Container With Most Water
 # https://leetcode.com/problems/container-with-most-water/
 def maxArea(self, height: List[int]) -> int:
     left = 0;
@@ -55,6 +60,7 @@ def maxArea(self, height: List[int]) -> int:
             right -= 1
     return maxWater
 
+# 49. Group Anagrams
 # https://leetcode.com/problems/group-anagrams/
 def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
     anagramsDic = dict()
@@ -68,6 +74,7 @@ def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         result.append(list(values))
     return result
 
+# 1672. Richest Customer Wealth
 # https://leetcode.com/problems/richest-customer-wealth/
 def maximumWealth(self, accounts: List[List[int]]) -> int:
     maxWealth = 0
@@ -76,6 +83,7 @@ def maximumWealth(self, accounts: List[List[int]]) -> int:
         maxWealth = max(maxWealth, sum_accounts)
     return maxWealth
 
+# 21. Merge Two Sorted Lists
 # https://leetcode.com/problems/merge-two-sorted-lists/
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -112,6 +120,7 @@ def mergeTwoLists(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optio
         last = last.next
     return head
 
+# 88. Merge Sorted Array
 # https://leetcode.com/problems/merge-sorted-array
 def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
     if m == 0:
@@ -133,6 +142,7 @@ def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
             nums1.insert(i1 + 1, nums2[i])
             i1 += 1
 
+# 14. Longest Common Prefix
 # https://leetcode.com/problems/longest-common-prefix
 class Solution:
   
@@ -156,6 +166,7 @@ class Solution:
               return ''
       return prefix
 
+# 150. Evaluate Reverse Polish Notation
 # https://leetcode.com/problems/evaluate-reverse-polish-notation/
 def evalRPN(self, tokens: List[str]) -> int:
     values = list()
@@ -177,6 +188,7 @@ def evalRPN(self, tokens: List[str]) -> int:
             values.append(new_value)
     return values[0]
 
+# 56. Merge Intervals
 # https://leetcode.com/problems/merge-intervals/
 def merge(self, intervals: List[List[int]]) -> List[List[int]]:
     if not intervals or len(intervals) == 1:
@@ -192,23 +204,25 @@ def merge(self, intervals: List[List[int]]) -> List[List[int]]:
             result.append([start, end])
     return result
 
+# 24. Swap Nodes in Pairs
 # https://leetcode.com/problems/swap-nodes-in-pairs/
-    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if (not head) or (not head.next):
-            return head
-        left = head
-        right = head.next
-        while left and right:
-            left.val, right.val = right.val, left.val
-            if not right.next:
-                break
-            left = right.next
-            if left and left.next:
-                right = left.next
-            else:
-                break
+def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    if (not head) or (not head.next):
         return head
+    left = head
+    right = head.next
+    while left and right:
+        left.val, right.val = right.val, left.val
+        if not right.next:
+            break
+        left = right.next
+        if left and left.next:
+            right = left.next
+        else:
+            break
+    return head
 
+# 443. String Compression
 # https://leetcode.com/problems/string-compression
 def compress(self, chars: List[str]) -> int:
     if len(chars) == 1:
@@ -235,6 +249,7 @@ def compress(self, chars: List[str]) -> int:
                 i += 1
     return i
 
+# 94. Binary Tree Inorder Traversal
 # https://leetcode.com/problems/binary-tree-inorder-traversal
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -251,6 +266,7 @@ def __inorderTraversal (self, node: Optional[TreeNode], inOrder: list[TreeNode])
         inOrder.append(node.val)
         self.__inorderTraversal(node.right, inOrder)
 
+# 3. Longest Substring Without Repeating Characters
 # https://leetcode.com/problems/longest-substring-without-repeating-characters
 def lengthOfLongestSubstring(self, s: str) -> int:
     if s == None or len(s) == 0:
@@ -275,6 +291,7 @@ def lengthOfLongestSubstring(self, s: str) -> int:
             right += 1
     return max_len
 
+# 15. 3Sum
 # https://leetcode.com/problems/3sum
 def threeSum(self, nums: List[int]) -> List[List[int]]:
     nums.sort()
@@ -300,6 +317,7 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
                 right -= 1
     return list(triplets)
 
+# 268. Missing Number
 # https://leetcode.com/problems/missing-number/
 def missingNumber(self, nums: List[int]) -> int:
     if len(nums) == 1:
@@ -321,6 +339,7 @@ def missingNumber(self, nums: List[int]) -> int:
         total_sum += num
     return total_sum - _sum if total_sum - _sum > 0 else _max + 1
 
+# 102. Binary Tree Level Order Traversal
 # https://leetcode.com/problems/binary-tree-level-order-traversal
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -343,6 +362,7 @@ def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         result.append(nodes)
     return result
 
+# 42. Trapping Rain Water
 # https://leetcode.com/problems/trapping-rain-water
 def trap(self, height: List[int]) -> int:
     limits = list()
@@ -361,6 +381,7 @@ def trap(self, height: List[int]) -> int:
             total_water += limit - height[i]
     return total_water
 
+# 289. Game of Life
 # https://leetcode.com/problems/game-of-life
 def get_status(self, board: List[List[int]], i, j) -> int:
   ''''
@@ -402,6 +423,7 @@ def gameOfLife(self, board: List[List[int]]) -> None:
         if board[i][j] == 3:
           board[i][j] = 0
 
+# 18. 4Sum
 # https://leetcode.com/problems/4sum
 # Solution 1
 def fourSum1(self, nums: List[int], target: int) -> List[List[int]]:
@@ -456,6 +478,7 @@ def fourSum2(self, nums: List[int], target: int) -> List[List[int]]:
           final_result.append(list(e))
     return final_result
 
+# 100. Same Tree
 # https://leetcode.com/problems/same-tree
 # Definition for a binary tree node.
 # class TreeNode:
@@ -499,6 +522,7 @@ def isSameTree(self, tree1: Optional[TreeNode], tree2: Optional[TreeNode]) -> bo
         self.add_to_queue(queue2, node2.right)
     return True
 
+# 23. Merge k Sorted Lists
 # https://leetcode.com/problems/merge-k-sorted-lists
 # Definition for singly-linked list.
 # class ListNode:
@@ -565,6 +589,7 @@ def merge_intervals(intervals1: list, intervals2: list) -> list:
         _merge(intervals2[i], result)
     return result
 
+# 98. Validate Binary Search Tree
 # https://leetcode.com/problems/validate-binary-search-tree
 class Solution:
     current = None
@@ -588,6 +613,7 @@ class Solution:
         self.current = node.val
         self.inOrder(node.right)
 
+# 283. Move Zeroes
 # https://leetcode.com/problems/move-zeroes
 def moveZeroes(self, nums: List[int]) -> None:
     left = 0
@@ -601,6 +627,7 @@ def moveZeroes(self, nums: List[int]) -> None:
             left += 1
         right += 1
 
+# 136. Single Number
 # https://leetcode.com/problems/single-number
 def singleNumber(self, nums: List[int]) -> int:
     mySet = set()
@@ -611,6 +638,7 @@ def singleNumber(self, nums: List[int]) -> int:
             mySet.remove(n)
     return list(mySet)[0]
 
+# 13. Roman to Integer
 # https://leetcode.com/problems/roman-to-integer
 def romanToInt(self, s: str) -> int:
     table = dict()
@@ -644,7 +672,7 @@ def romanToInt(self, s: str) -> int:
         i += 1
     return result
 
-
+# 61. Rotate List
 # https://leetcode.com/problems/rotate-list/
 def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
     if head == None:
@@ -676,7 +704,8 @@ def listLen(self, head: Optional[ListNode]) -> int:
         count += 1
         runner = runner.next
     return count
-  
+
+# 138. Copy List with Random Pointer
 # https://leetcode.com/problems/copy-list-with-random-pointer
 class Node:
     def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
@@ -701,6 +730,7 @@ def copyRandomList(self, head: 'Node') -> 'Node':
         runner = runner.next
     return mapping[head]
 
+# 125. Valid Palindrome
 # https://leetcode.com/problems/valid-palindrome
 def isPalindrome(self, s: str) -> bool:
     left = 0
@@ -718,6 +748,7 @@ def isPalindrome(self, s: str) -> bool:
         right -= 1
     return True
 
+# 48. Rotate Image
 # https://leetcode.com/problems/rotate-image
 def rotate(self, matrix: List[List[int]]) -> None:
     # Rotate matrix using the principal diagonal as pivot
@@ -733,6 +764,7 @@ def rotate(self, matrix: List[List[int]]) -> None:
             left += 1
             right -= 1
 
+# 101. Symmetric Tree
 # https://leetcode.com/problems/symmetric-tree
 class Solution:
     
@@ -757,6 +789,7 @@ class Solution:
             self.__check(left.left, right.right)
             self.__check(left.right, right.left)
 
+# 104. Maximum Depth of Binary Tree
 # https://leetcode.com/problems/maximum-depth-of-binary-tree
 def maxDepth(self, root: Optional[TreeNode]) -> int:
     if not root:
@@ -766,6 +799,7 @@ def maxDepth(self, root: Optional[TreeNode]) -> int:
         right_depth = self.maxDepth(root.right)
         return 1 + max(left_depth, right_depth)
 
+# 994. Rotting Oranges
 # https://leetcode.com/problems/rotting-oranges/
 
 # Solution one
@@ -864,6 +898,7 @@ class Solution:
         else:
             return response - 1
 
+# 977. Squares of a Sorted Array
 # https://leetcode.com/problems/squares-of-a-sorted-array
 def sortedSquares(self, nums: List[int]) -> List[int]:
     left = 0
@@ -880,6 +915,7 @@ def sortedSquares(self, nums: List[int]) -> List[int]:
             right -= 1
     return result
 
+# 23. Merge k Sorted Lists
 # https://leetcode.com/problems/merge-k-sorted-lists
 import heapq
 # Definition for singly-linked list.
@@ -911,6 +947,7 @@ class Solution:
                 heapq.heappush(heap, [lists[list_index].val, list_index])
         return head
 
+# 79. Word Search
 # https://leetcode.com/problems/word-search
 '''
 Using DFS
@@ -975,6 +1012,7 @@ class Solution:
                 self.bsf(board, word, i , j - 1, index + 1, set(visited))
                 self.bsf(board, word, i, j + 1, index + 1, set(visited))
 
+# 146. LRU Cache
 # https://leetcode.com/problems/lru-cache
 def __init__(self, capacity: int):
     self.__capacity = capacity
@@ -998,6 +1036,7 @@ def put(self, key: int, value: int) -> None:
         if keyToRemove != key:
             self.__cache.pop(keyToRemove)
 
+# 696. Count Binary Substrings
 # https://leetcode.com/problems/count-binary-substrings
 def buildSummary(self, s: str) -> list:
     summary = list()
@@ -1022,6 +1061,7 @@ def countBinarySubstrings(self, s: str) -> int:
         count += min(summary[i][1], summary[i+1][1])
     return count
 
+# 472. Concatenated Words
 # https://leetcode.com/problems/concatenated-words
 def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
     wordsSet = set(words)
@@ -1054,6 +1094,7 @@ def checkSufix(self, word: str, words: Set[str], history: dict) -> bool:
     history[word] = False
     return False
 
+# 692. Top K Frequent Words
 # https://leetcode.com/problems/top-k-frequent-words
 def topKFrequent(self, words: List[str], k: int) -> List[str]:
     summary = dict()
@@ -1081,6 +1122,7 @@ def topKFrequent(self, words: List[str], k: int) -> List[str]:
             word_index += 1
     return result
 
+# 414. Third Maximum Number
 # https://leetcode.com/problems/third-maximum-number/
 import heapq
 
@@ -1097,6 +1139,7 @@ class Solution:
             heapq.heappop(heap)
         return heapq.heappop(heap)
 
+# 207. Course Schedule
 # https://leetcode.com/problems/course-schedule/
 def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
     summary = dict()
@@ -1125,6 +1168,7 @@ def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
     
     return len(refCountDic) == 0
 
+# 210. Course Schedule II
 # https://leetcode.com/problems/course-schedule-ii/
 def __init__(self):
     self.cycle = None
@@ -1160,6 +1204,7 @@ def dfs(self, graph: dict, course: int, result: list) -> None:
     self.visited.add(course)
     self.processing.remove(course)
 
+# 199. Binary Tree Right Side View
 # https://leetcode.com/problems/binary-tree-right-side-view/
 def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
     _dict = dict()
@@ -1172,6 +1217,7 @@ def visit(self, node: Optional[TreeNode], _dict: dict, level: int) -> None:
         self.visit(node.left, _dict, level + 1)
         self.visit(node.right, _dict, level + 1)
 
+# 724. Find Pivot Index
 # https://leetcode.com/problems/find-pivot-index/
 def pivotIndex(self, nums: List[int]) -> int:
     sums = list()
@@ -1192,6 +1238,7 @@ def pivotIndex(self, nums: List[int]) -> int:
         return len(sums) - 1
     return -1
 
+# 953. Verifying an Alien Dictionary
 # https://leetcode.com/problems/verifying-an-alien-dictionary/
 def isAlienSorted(self, words: List[str], order: str) -> bool:
     lettersOrder = self.buildOrderDict(order)
@@ -1218,6 +1265,7 @@ def inOrder(self, leftWord: str, rightWord: str, lettersOrder: dict) -> bool:
         return False
     return True
 
+# 347. Top K Frequent Elements
 # https://leetcode.com/problems/top-k-frequent-elements/
 def topKFrequent(self, nums: List[int], k: int) -> List[int]:
     numCountDict = dict()
@@ -1235,6 +1283,7 @@ def topKFrequent(self, nums: List[int], k: int) -> List[int]:
                 response.add(num)
     return list(response)
 
+# 200. Number of Islands
 # https://leetcode.com/problems/number-of-islands/
 class Solution:
     LAND = '1'
@@ -1262,6 +1311,7 @@ class Solution:
             self.update(grid, i, j - 1, visitedIslands)
             self.update(grid, i, j + 1, visitedIslands)
 
+# 146. LRU Cache
 # https://leetcode.com/problems/lru-cache/
 def __init__(self, capacity: int):
     self.__capacity = capacity
@@ -1286,6 +1336,7 @@ def put(self, key: int, value: int) -> None:
         if keyToRemove != key:
             self.__cache.pop(keyToRemove)
 
+# 221. Maximal Square
 # https://leetcode.com/problems/maximal-square
 def maximalSquare(self, matrix: List[List[str]]) -> int:
     max_len = 0
