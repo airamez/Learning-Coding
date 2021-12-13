@@ -1419,3 +1419,23 @@ def process(self, instructions: str, pos: list) -> None:
                 pos[2] = 'W'
             else:
                 pos[2] = 'N'
+
+# 547. Number of Provinces
+# https://leetcode.com/problems/number-of-provinces/
+def findCircleNum(self, isConnected: List[List[int]]) -> int:
+    union_finder = dict()
+    for i in range(len(isConnected)):
+        union_finder[i] = i
+    for city in union_finder.keys():
+        self.dfs(isConnected, city, union_finder, set())
+    return len(set(union_finder.values()))
+
+def dfs(self, isConnected: List[List[int]], visiting_city: int, union_finder: dict, visited: set) -> None:
+    if visiting_city in visited:
+        return
+    visited.add(visiting_city)
+    connected_cities = isConnected[visiting_city]
+    for city in range(len(isConnected)):
+        if city != visiting_city and connected_cities[city] == 1:
+            union_finder[city] = union_finder[visiting_city]
+            self.dfs(isConnected, city, union_finder, visited)
