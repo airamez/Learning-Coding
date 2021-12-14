@@ -93,7 +93,7 @@ Critics, suggestions and recommendations are very welcome!
 | Graphos 1 | [_67_Graphos_01.py](Python/_67_Graphos_01.py) | 
 | Practices | [_99_Practices.py](Python/_99_Practices.py) | 
 
-## Cheatsheet
+# Cheatsheet
 
 ## Basic Types:
 - int
