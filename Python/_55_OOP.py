@@ -24,8 +24,8 @@ class Shape:
 
 
 class Circle(Shape):
-    def __init__(self, borderColor: str, borderWidth: int, center: Point,
-                 radius: float):
+    def __init__(self, borderColor: str, borderWidth: int, 
+                 center: Point, radius: float):
         super().__init__(borderColor, borderWidth)
         self.center = center
         self.radius = radius
@@ -42,8 +42,8 @@ class Circle(Shape):
 
 
 class Square(Shape):
-    def __init__(self, borderColor, borderWidth, topLeft: Point,
-                 bottomRight: Point):
+    def __init__(self, borderColor, borderWidth, 
+                 topLeft: Point, bottomRight: Point):
         super().__init__(borderColor, borderWidth)
         self.topLeft = topLeft
         self.bottomRight = bottomRight
