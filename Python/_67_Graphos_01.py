@@ -38,7 +38,7 @@ class DirectNode:
                     stack.append(adj)
         return path
 
-    def transverseBFS (self):
+    def transverseBFS (self) -> List[DirectNode]:
         queue = deque()
         queue.appendleft(self)
         path = list()
@@ -52,8 +52,26 @@ class DirectNode:
                     queue.appendleft(adj)
         return path
 
-    def hasCycle(self):
-        pass
+    def hasCycle(self) -> bool:
+        stack = deque()
+        stack.append(self)
+        visited = set()
+        visiting = set()
+        self.__hasCycle = False
+        self.__hasCycleDFS(self, visited, visiting)
+        return self.__hasCycle
+
+
+    def __hasCycleDFS(self, node: DirectNode, visited: Set[DirectNode], visiting: Set[DirectNode]) -> None:
+        if node in visiting:
+            self.__hasCycle = True
+        if node in visited:
+            return
+        visited.add(node)
+        visiting.add(node)
+        for adj in node.Adjacents:
+            self.__hasCycleDFS(adj, visited, visiting)
+        visiting.remove(node)
 
     def __repr__(self) -> str:
         adjacents = list()
@@ -88,28 +106,29 @@ for node in graph.values():
 
 for node in graph['a'].transverseDSF_Recursion():
     print(node.Info, end=' ')
-
 print()
 
 for node in graph['e'].transverseDSF_Recursion():
     print(node.Info, end=' ')
-
 print()
 
 for node in graph['a'].transverseDPS_NoRecursion():
     print(node.Info, end=' ')
-
 print()
 
 for node in graph['e'].transverseDPS_NoRecursion():
     print(node.Info, end=' ')
-
 print()
 
 for node in graph['a'].transverseBFS():
     print(node.Info, end=' ')
-
 print()
 
 for node in graph['e'].transverseBFS():
     print(node.Info, end=' ')
+print()
+
+print(graph['a'].hasCycle())
+
+graph['g'].addAdjacent(graph['c'])
+print(graph['a'].hasCycle())

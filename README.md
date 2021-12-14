@@ -90,7 +90,7 @@ Critics, suggestions and recommendations are very welcome!
 | DateTime | [_64_DateTime.py](Python/_64_DateTime.py) | 
 | Deck | [_65_Deck.py](Python/_65_Deck.py) | 
 | Heap | [_66_Heap.py](Python/_66_Heap.py) | 
-
+| Graphos 1 | [_67_Graphos_01.py](Python_67_Graphos_01.py) | 
 | Practices | [_99_Practices.py](Python/_99_Practices.py) | 
 
 ## Cheatsheet
