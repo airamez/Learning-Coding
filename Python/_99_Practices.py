@@ -1439,3 +1439,14 @@ def dfs(self, isConnected: List[List[int]], visiting_city: int, union_finder: di
         if city != visiting_city and connected_cities[city] == 1:
             union_finder[city] = union_finder[visiting_city]
             self.dfs(isConnected, city, union_finder, visited)
+
+# 215. Kth Largest Element in an Array
+# https://leetcode.com/problems/kth-largest-element-in-an-array
+def findKthLargest(self, nums: List[int], k: int) -> int:
+    heap = list()
+    heapq.heapify(heap)
+    for num in nums:
+        heapq.heappush(heap, num)
+        if len(heap) > k:
+            heapq.heappop(heap)
+    return heapq.heappop(heap)
