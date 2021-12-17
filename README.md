@@ -412,7 +412,7 @@ my_birth = datetime.strptime(date_str, '%d/%m/%Y %H:%M')
 | ```deque()```| Constructor |
 | ```append(element)```| Add to the right (End/Tail) |
 | ```appendleft(element)```| Add to the left (Start/Head) |
-| ```insert(1, element)```| Inserts at specific position|
+| ```insert(index, element)```| Inserts at a specific index |
 | ```popleft()```| Removes and returns from the left (Start/Head) |
 | ```pop()```| Removes and returns from the right (End/Tail) |
 
