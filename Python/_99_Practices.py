@@ -1479,3 +1479,24 @@ def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
             result.append(matrix[i][left])
         left += 1
     return result
+
+# 112. Path Sum
+# https://leetcode.com/problems/path-sum
+class Solution:
+    def __init__(self):
+        __has_sum = False
+        
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        self.__has_sum = False
+        self.__findSum(root, 0, targetSum)
+        return self.__has_sum
+        
+    def __findSum(self, node: TreeNode, currentSum: int, targetSum: int) -> None:
+        if node is None or self.__has_sum:
+            return
+        currentSum += node.val
+        if node.left is None and node.right is None and currentSum == targetSum:
+            self.__has_sum = True
+            return
+        self.__findSum(node.left, currentSum, targetSum)
+        self.__findSum(node.right, currentSum, targetSum)
