@@ -1,0 +1,35 @@
+URL: https://palletsprojects.com/p/flask/
+Documentation: https://flask.palletsprojects.com/
+
+FLASK
+- Flask is a lightweight WSGI web application framework. 
+- It is designed to make getting started quick and easy, with the ability to scale up to complex applications. 
+- It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
+
+Instalation
+- pip install Flask
+- Output:
+    PS C:\Users\airam> cd C:\Users\airam\OneDrive\Learning-Coding
+    PS C:\Users\airam\OneDrive\Learning-Coding> cd .\Flask\
+    PS C:\Users\airam\OneDrive\Learning-Coding\Flask> pip install Flask
+    Collecting Flask
+      Downloading Flask-2.0.2-py3-none-any.whl (95 kB)
+        |████████████████████████████████| 95 kB 3.3 MB/s
+    Collecting click>=7.1.2
+      Downloading click-8.0.3-py3-none-any.whl (97 kB)
+        |████████████████████████████████| 97 kB ...
+    Collecting Werkzeug>=2.0
+      Downloading Werkzeug-2.0.2-py3-none-any.whl (288 kB)
+        |████████████████████████████████| 288 kB 1.6 MB/s
+    Collecting Jinja2>=3.0
+      Downloading Jinja2-3.0.3-py3-none-any.whl (133 kB)
+        |████████████████████████████████| 133 kB 6.4 MB/s
+    Collecting itsdangerous>=2.0
+      Downloading itsdangerous-2.0.1-py3-none-any.whl (18 kB)
+    Collecting colorama
+      Downloading colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+    Collecting MarkupSafe>=2.0
+      Downloading MarkupSafe-2.0.1-cp39-cp39-win_amd64.whl (14 kB)
+    Installing collected packages: MarkupSafe, colorama, Werkzeug, Jinja2, itsdangerous, click, Flask
+    Successfully installed Flask-2.0.2 Jinja2-3.0.3 MarkupSafe-2.0.1 Werkzeug-2.0.2 click-8.0.3 colorama-0.4.4 itsdangerous-2.0.1
+    PS C:\Users\airam\OneDrive\Learning-Coding\Flask>
