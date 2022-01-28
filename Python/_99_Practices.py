@@ -1500,3 +1500,35 @@ class Solution:
             return
         self.__findSum(node.left, currentSum, targetSum)
         self.__findSum(node.right, currentSum, targetSum)
+
+# https://www.hackerrank.com/challenges/new-year-chaos
+def minimumBribes(q):
+    bribes = 0
+    for i in range(len(q)-1, 0, -1):
+        if q[i] != i + 1:
+            if q[i - 1] == i + 1:
+                bribes += 1
+                q[i-1], q[i] = q[i], q[i-1]
+            elif i >= 2 and q[i-2] == i + 1:
+                bribes += 2
+                q[i-2], q[i-1] = q[i-1], q[i-2]
+                q[i-1], q[i] = q[i], q[i-1]
+            else:
+                print("Too chaotic")
+                return
+    print(bribes)
+
+# https://stackoverflow.com/questions/56878798/minimum-number-of-adjacent-swaps-of-binary-array
+def minSwaps(input: List[int]) -> int:
+  swap_0 = 0
+  swap_1 = 0
+  count_0 = 0
+  count_1 = 0
+  for n in input:
+    if n == 0:
+      count_0 += 1
+      swap_0 += count_1
+    else:
+      count_1 += 1
+      swap_1 += count_0
+  return min(swap_0, swap_1)
