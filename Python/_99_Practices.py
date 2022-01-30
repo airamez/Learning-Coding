@@ -1532,3 +1532,27 @@ def minSwaps(input: List[int]) -> int:
       count_1 += 1
       swap_1 += count_0
   return min(swap_0, swap_1)
+
+# https://www.hackerrank.com/challenges/minimum-swaps-2
+def minimumSwaps(arr):
+    i = 0
+    swaps = 0
+    while i < len(arr):
+        if arr[i] == i+1:
+            i += 1
+        else:
+            arr[arr[i]-1], arr[i] = arr[i], arr[arr[i]-1]
+            swaps += 1
+    return swaps
+
+def arrayManipulation(n, queries):
+    arr = [0] * (n+1)
+    for a, b, k in queries:
+        arr[a-1] += k
+        arr[b] -= k
+    _max = 0
+    counter = 0
+    for i in arr:
+        counter += i
+        _max = max(_max, counter)
+    return _max
