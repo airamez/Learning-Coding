@@ -1556,3 +1556,45 @@ def arrayManipulation(n, queries):
         counter += i
         _max = max(_max, counter)
     return _max
+
+# https://www.hackerrank.com/challenges/magic-square-forming
+from itertools import permutations
+
+def check(matrix):
+  row0 = row1 = row2 = col0 = col1 = col2 = diagPrin = diagSec = 0
+  for i in range(3):
+    row0 += matrix[0][i]
+    row1 += matrix[1][i]
+    row2 += matrix[2][i]
+    col0 += matrix[i][0]
+    col1 += matrix[i][1]
+    col2 += matrix[i][2]
+    diagPrin += matrix[i][i]
+    diagSec += matrix[i][3 - (i + 1)]
+  return row0 == row1 == row2 == col0 == col1 == col2 == diagPrin == diagSec
+
+def generateSolutions():
+  solutions = list()
+  digits = [1,2,3,4,5,6,7,8,9]
+  perms = list(permutations(digits))
+  for perm in perms:
+    matrix = [[0,0,0], [0,0,0], [0,0,0]]
+    index = 0
+    for i in range(3):
+      for j in range(3):
+        matrix[i][j] = perm[index]
+        index += 1
+    if check(matrix):
+      print(matrix)
+      solutions.append(matrix)
+  return solutions
+
+def formingMagicSquare(s):
+    min_cost = 27
+    for possible in generateSolutions():
+        cost = 0
+        for i in range(len(possible)):
+            for j in range(len(possible[i])):
+                cost += abs(s[i][j] - possible[i][j])
+        min_cost = min(min_cost, cost)
+    return min_cost
